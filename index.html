@@ -3,33 +3,33 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Диваны на заказ для современного интерьера. Изготовим модель любого размера из премиальных тканей. Сроки от 14 дней, гарантия 2 года.">
-<title>ATELIER — диваны на заказ для вашего интерьера</title>
+<meta name="description" content="Диваны и кровати Asl Soft на заказ. Подберем мягкую мебель под размер вашей комнаты, ткань и бюджет. Изготовление от 14 дней, доставка и сборка.">
+<title>Asl Soft — диваны и кровати на заказ под ваш интерьер</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Nunito+Sans:opsz,wght@6..12,300;6..12,400;6..12,500;6..12,600;6..12,700&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 :root{
---b:#f7f2ec;
---b-alt:#efe7dc;
+--b:#f6f1ea;
+--b-alt:#ede4d8;
 --s:#fff;
---t:#1f1a16;
---t-sec:#7a6f64;
+--t:#1c1815;
+--t-sec:#786c60;
 --t-mut:#a89b8e;
---accent:#4a5d3e;
---accent-h:#3d4d33;
---accent-l:#eef3ea;
---terracotta:#b8735a;
---terracotta-h:#a3644e;
+--primary:#3d4f3d;
+--primary-h:#2f3d2f;
+--primary-l:#eef3ec;
+--warm:#d4a373;
+--warm-h:#c49060;
 --gold:#c4a882;
---border:#e2d5c7;
---shadow:0 4px 20px rgba(31,26,22,.06);
---shadow-h:0 12px 40px rgba(31,26,22,.12);
+--border:#ded0c0;
+--shadow:0 4px 20px rgba(28,24,21,.06);
+--shadow-h:0 12px 40px rgba(28,24,21,.12);
 --rad:16px;
 --rad-sm:8px;
---font-h:'Cormorant Garamond',Georgia,serif;
---font-b:'Jost',sans-serif;
+--font-h:'Playfair Display',Georgia,serif;
+--font-b:'Nunito Sans',sans-serif;
 --max-w:1200px;
 --pad:120px 24px;
 --pad-m:80px 20px;
@@ -45,15 +45,19 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
 ul{list-style:none}
 .container{width:100%;max-width:var(--max-w);margin:0 auto;padding:0 24px}
 .section{padding:var(--pad)}
-.section__title{font-family:var(--font-h);font-size:clamp(32px,5vw,56px);font-weight:600;line-height:1.15;margin-bottom:8px;color:var(--t)}
-.section__sub{font-size:clamp(16px,1.2vw,19px);color:var(--t-sec);max-width:540px;margin-bottom:56px;font-weight:400;line-height:1.5}
+.section__title{font-family:var(--font-h);font-size:clamp(30px,4.5vw,50px);font-weight:600;line-height:1.15;margin-bottom:8px;color:var(--t)}
+.section__sub{font-size:clamp(16px,1.2vw,18px);color:var(--t-sec);font-weight:400;line-height:1.55;margin-bottom:48px;max-width:560px}
+.section__header{text-align:center;margin-bottom:48px}
+.section__header .section__sub{margin-left:auto;margin-right:auto}
+.section__label{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--primary);background:var(--primary-l);padding:6px 14px;border-radius:100px;margin-bottom:16px}
 /* header */
 .header{position:fixed;top:0;left:0;right:0;z-index:100;padding:0 24px;height:var(--nav-h);display:flex;align-items:center;justify-content:space-between;transition:background var(--dur) var(--ease),box-shadow var(--dur) var(--ease)}
-.header.scrolled{background:rgba(247,242,236,.92);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);box-shadow:0 1px 0 var(--border)}
-.header__logo{font-family:var(--font-h);font-size:22px;font-weight:600;letter-spacing:.08em;color:var(--t)}
-.header__nav{display:flex;gap:32px}
-.header__nav a{font-size:14px;font-weight:500;letter-spacing:.03em;color:var(--t-sec);transition:color var(--dur);position:relative}
-.header__nav a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:1.5px;background:var(--accent);transition:width var(--dur) var(--ease)}
+.header.scrolled{background:rgba(246,241,234,.92);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);box-shadow:0 1px 0 var(--border)}
+.header__logo{display:flex;align-items:center;gap:8px;font-family:var(--font-h);font-size:20px;font-weight:600;letter-spacing:.04em;color:var(--t)}
+.header__logo span{font-weight:400;color:var(--primary);font-size:14px;letter-spacing:.15em}
+.header__nav{display:flex;gap:28px}
+.header__nav a{font-size:14px;font-weight:500;color:var(--t-sec);transition:color var(--dur);position:relative}
+.header__nav a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:1.5px;background:var(--primary);transition:width var(--dur) var(--ease)}
 .header__nav a:hover{color:var(--t)}
 .header__nav a:hover::after{width:100%}
 .header__burger{display:none;flex-direction:column;gap:5px;padding:4px;cursor:pointer}
@@ -63,164 +67,189 @@ ul{list-style:none}
 .header__burger.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
 .mobile-nav{position:fixed;top:var(--nav-h);left:0;right:0;bottom:0;background:var(--b);z-index:99;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:24px;opacity:0;pointer-events:none;transition:opacity var(--dur);padding:24px}
 .mobile-nav.open{opacity:1;pointer-events:auto}
-.mobile-nav a{font-family:var(--font-h);font-size:28px;color:var(--t);transition:color var(--dur)}
-.mobile-nav a:hover{color:var(--accent)}
+.mobile-nav a{font-family:var(--font-h);font-size:28px;color:var(--t)}
 /* hero */
 .hero{min-height:100vh;display:flex;align-items:center;padding-top:var(--nav-h);position:relative;overflow:hidden}
-.hero__grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;min-height:calc(100vh - var(--nav-h))}
+.hero__grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;min-height:calc(100vh - var(--nav-h))}
 .hero__content{padding:48px 0}
-.hero__badge{display:inline-block;font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);background:var(--accent-l);padding:8px 16px;border-radius:100px;margin-bottom:24px}
-.hero__title{font-family:var(--font-h);font-size:clamp(36px,5.5vw,64px);font-weight:600;line-height:1.08;margin-bottom:16px;color:var(--t)}
-.hero__sub{font-size:clamp(16px,1.2vw,19px);color:var(--t-sec);line-height:1.55;margin-bottom:36px;max-width:480px}
-.hero__actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:48px}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 32px;border-radius:100px;font-size:15px;font-weight:500;letter-spacing:.02em;transition:all var(--dur) var(--ease);position:relative;overflow:hidden}
-.btn-primary{background:var(--accent);color:#fff}
-.btn-primary:hover{background:var(--accent-h);transform:translateY(-1px);box-shadow:0 8px 24px rgba(74,93,62,.3)}
+.hero__title{font-family:var(--font-h);font-size:clamp(34px,5vw,58px);font-weight:600;line-height:1.08;margin-bottom:16px;color:var(--t)}
+.hero__sub{font-size:clamp(16px,1.15vw,18px);color:var(--t-sec);line-height:1.55;margin-bottom:32px;max-width:480px}
+.hero__tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:28px}
+.hero__tag{padding:6px 14px;border-radius:100px;font-size:13px;font-weight:500;background:var(--s);border:1px solid var(--border);color:var(--t-sec)}
+.hero__actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:40px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 32px;border-radius:100px;font-size:15px;font-weight:600;letter-spacing:.02em;transition:all var(--dur) var(--ease)}
+.btn-primary{background:var(--primary);color:#fff}
+.btn-primary:hover{background:var(--primary-h);transform:translateY(-1px);box-shadow:0 8px 24px rgba(61,79,61,.3)}
 .btn-secondary{border:1.5px solid var(--border);color:var(--t);background:transparent}
-.btn-secondary:hover{border-color:var(--t);background:rgba(31,26,22,.03);transform:translateY(-1px)}
+.btn-secondary:hover{border-color:var(--t);background:rgba(28,24,21,.03);transform:translateY(-1px)}
 .btn-whatsapp{background:#25d366;color:#fff}
 .btn-whatsapp:hover{background:#1da954;transform:translateY(-1px);box-shadow:0 8px 24px rgba(37,211,102,.3)}
-.btn-outline-light{border:1.5px solid rgba(255,255,255,.3);color:#fff;background:transparent}
+.btn-warm{background:var(--warm);color:#fff}
+.btn-warm:hover{background:var(--warm-h);transform:translateY(-1px);box-shadow:0 8px 24px rgba(212,163,115,.3)}
+.btn-outline-light{border:1.5px solid rgba(255,255,255,.25);color:#fff;background:transparent}
 .btn-outline-light:hover{border-color:#fff;background:rgba(255,255,255,.08)}
-.hero__badges{display:flex;gap:32px;flex-wrap:wrap}
-.hero__badge-item{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--t-sec);font-weight:500}
-.hero__badge-item svg{flex-shrink:0;color:var(--accent)}
-.hero__image{position:relative;height:100%;min-height:500px;border-radius:var(--rad);overflow:hidden}
+.hero__badges{display:flex;gap:28px;flex-wrap:wrap}
+.hero__badge{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:500;color:var(--t-sec)}
+.hero__badge svg{flex-shrink:0;color:var(--primary)}
+.hero__image{position:relative;height:100%;min-height:520px;border-radius:var(--rad);overflow:hidden}
 .hero__image img{width:100%;height:100%;object-fit:cover;position:absolute;top:0;left:0}
-.hero__image::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,transparent 40%,rgba(31,26,22,.15))}
-/* section headers */
-.section__header{text-align:center;margin-bottom:56px}
-.section__header .section__sub{margin-left:auto;margin-right:auto}
-.section__label{display:inline-block;font-size:11px;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--accent);background:var(--accent-l);padding:6px 14px;border-radius:100px;margin-bottom:16px}
-/* catalog */
-.catalog__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.catalog-card{background:var(--s);border-radius:var(--rad);overflow:hidden;box-shadow:var(--shadow);transition:all var(--dur) var(--ease);cursor:pointer;display:flex;flex-direction:column}
-.catalog-card:hover{box-shadow:var(--shadow-h);transform:translateY(-4px)}
-.catalog-card__image{position:relative;overflow:hidden;aspect-ratio:4/3}
-.catalog-card__image img{width:100%;height:100%;object-fit:cover;transition:transform .6s var(--ease)}
-.catalog-card:hover .catalog-card__image img{transform:scale(1.05)}
-.catalog-card__body{padding:20px 24px 24px;flex:1;display:flex;flex-direction:column}
-.catalog-card__title{font-family:var(--font-h);font-size:20px;font-weight:600;margin-bottom:6px;color:var(--t)}
-.catalog-card__desc{font-size:14px;color:var(--t-sec);line-height:1.5;margin-bottom:12px;flex:1}
-.catalog-card__meta{display:flex;justify-content:space-between;align-items:center;padding-top:12px;border-top:1px solid var(--border)}
-.catalog-card__size{font-size:13px;color:var(--t-mut)}
-.catalog-card__price{font-family:var(--font-h);font-size:20px;font-weight:600;color:var(--accent)}
-.catalog-card__btn{margin-top:16px;width:100%;text-align:center;padding:12px;border-radius:100px;border:1.5px solid var(--border);font-size:14px;font-weight:500;color:var(--t);transition:all var(--dur);background:transparent}
-.catalog-card__btn:hover{background:var(--t);color:#fff;border-color:var(--t)}
-/* advantages */
-.advantages{background:var(--b-alt)}
-.advantages__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
-.advantage-card{padding:40px 32px;background:var(--s);border-radius:var(--rad);box-shadow:var(--shadow);transition:all var(--dur) var(--ease);position:relative}
-.advantage-card:hover{box-shadow:var(--shadow-h);transform:translateY(-2px)}
-.advantage-card__icon{width:48px;height:48px;margin-bottom:20px;color:var(--accent)}
-.advantage-card__title{font-family:var(--font-h);font-size:20px;font-weight:600;margin-bottom:8px}
-.advantage-card__text{font-size:14px;color:var(--t-sec);line-height:1.6}
-/* materials */
-.materials__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.material-card{border-radius:var(--rad);overflow:hidden;background:var(--s);box-shadow:var(--shadow);transition:all var(--dur) var(--ease)}
-.material-card:hover{box-shadow:var(--shadow-h);transform:translateY(-2px)}
-.material-card__image{aspect-ratio:1;overflow:hidden}
-.material-card__image img{width:100%;height:100%;object-fit:cover;transition:transform .6s var(--ease)}
-.material-card:hover .material-card__image img{transform:scale(1.06)}
-.material-card__body{padding:16px 20px 20px}
-.material-card__title{font-family:var(--font-h);font-size:18px;font-weight:600;margin-bottom:4px}
-.material-card__desc{font-size:13px;color:var(--t-sec);line-height:1.5}
-/* howto */
-.howto{background:var(--b-alt)}
-.howto__grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;counter-reset:step}
-.howto__step{text-align:center;padding:40px 20px;background:var(--s);border-radius:var(--rad);box-shadow:var(--shadow);position:relative;transition:all var(--dur) var(--ease)}
-.howto__step:hover{box-shadow:var(--shadow-h);transform:translateY(-2px)}
-.howto__step::before{counter-increment:step;content:counter(step);position:absolute;top:-16px;left:50%;transform:translateX(-50%);width:36px;height:36px;border-radius:50%;background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:center;font-family:var(--font-h);font-size:16px;font-weight:600}
-.howto__step-icon{margin-top:8px;margin-bottom:16px;width:40px;height:40px;color:var(--accent);margin-left:auto;margin-right:auto}
-.howto__step-title{font-family:var(--font-h);font-size:20px;font-weight:600;margin-bottom:6px}
-.howto__step-text{font-size:14px;color:var(--t-sec);line-height:1.5}
+.hero__image::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,transparent 40%,rgba(28,24,21,.12))}
+/* category picker */
+.categories{padding:80px 24px;background:var(--s)}
+.categories__grid{max-width:var(--max-w);margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.category-card{position:relative;border-radius:var(--rad);overflow:hidden;min-height:340px;cursor:pointer;display:flex;align-items:flex-end;transition:all var(--dur) var(--ease)}
+.category-card:hover{transform:scale(1.01);box-shadow:var(--shadow-h)}
+.category-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .6s var(--ease)}
+.category-card:hover img{transform:scale(1.04)}
+.category-card__overlay{position:absolute;inset:0;background:linear-gradient(0deg,rgba(28,24,21,.7) 0%,rgba(28,24,21,.1) 60%,transparent 100%);pointer-events:none}
+.category-card__body{position:relative;z-index:2;padding:32px;color:#fff;width:100%}
+.category-card__title{font-family:var(--font-h);font-size:clamp(24px,3vw,36px);font-weight:600;margin-bottom:4px}
+.category-card__desc{font-size:14px;color:rgba(255,255,255,.7);margin-bottom:16px;max-width:300px}
+.category-card__btn{display:inline-flex;align-items:center;gap:6px;padding:10px 24px;border-radius:100px;border:1.5px solid rgba(255,255,255,.4);color:#fff;font-size:14px;font-weight:600;transition:all var(--dur)}
+.category-card__btn:hover{background:#fff;color:var(--t);border-color:#fff}
+/* products */
+.products{padding:var(--pad);background:var(--b)}
+.products--alt{background:var(--b-alt)}
+.products__header{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:40px;flex-wrap:wrap;gap:16px}
+.products__header .section__sub{margin-bottom:0}
+.products__grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.product-card{background:var(--s);border-radius:var(--rad);overflow:hidden;box-shadow:var(--shadow);transition:all var(--dur) var(--ease)}
+.product-card:hover{box-shadow:var(--shadow-h);transform:translateY(-3px)}
+.product-card__image{position:relative;overflow:hidden;aspect-ratio:4/3}
+.product-card__image img{width:100%;height:100%;object-fit:cover;transition:transform .6s var(--ease)}
+.product-card:hover .product-card__image img{transform:scale(1.06)}
+.product-card__badge{position:absolute;top:12px;left:12px;padding:4px 10px;border-radius:100px;font-size:11px;font-weight:600;background:var(--primary);color:#fff;z-index:2}
+.product-card__body{padding:16px 20px 20px}
+.product-card__title{font-family:var(--font-h);font-size:18px;font-weight:600;margin-bottom:4px;color:var(--t)}
+.product-card__type{font-size:13px;color:var(--t-mut);margin-bottom:8px}
+.product-card__desc{font-size:13px;color:var(--t-sec);line-height:1.5;margin-bottom:12px}
+.product-card__meta{display:flex;justify-content:space-between;align-items:center;padding-top:10px;border-top:1px solid var(--border)}
+.product-card__size{font-size:12px;color:var(--t-mut)}
+.product-card__price{font-family:var(--font-h);font-size:19px;font-weight:600;color:var(--primary)}
+.product-card__btn{margin-top:14px;width:100%;text-align:center;padding:11px;border-radius:100px;border:1.5px solid var(--border);font-size:13px;font-weight:600;color:var(--t);transition:all var(--dur);background:transparent}
+.product-card__btn:hover{background:var(--t);color:#fff;border-color:var(--t)}
+/* benefits */
+.benefits{background:var(--b-alt)}
+.benefits__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.benefit-card{padding:36px 28px;background:var(--s);border-radius:var(--rad);box-shadow:var(--shadow);transition:all var(--dur) var(--ease)}
+.benefit-card:hover{box-shadow:var(--shadow-h);transform:translateY(-2px)}
+.benefit-card__icon{width:44px;height:44px;margin-bottom:18px;color:var(--primary)}
+.benefit-card__title{font-family:var(--font-h);font-size:19px;font-weight:600;margin-bottom:6px}
+.benefit-card__text{font-size:14px;color:var(--t-sec);line-height:1.6}
+/* steps */
+.steps{padding:var(--pad)}
+.steps__grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;counter-reset:step}
+.step-card{text-align:center;padding:36px 16px 32px;background:var(--s);border-radius:var(--rad);box-shadow:var(--shadow);position:relative;transition:all var(--dur) var(--ease)}
+.step-card:hover{box-shadow:var(--shadow-h);transform:translateY(-2px)}
+.step-card::before{counter-increment:step;content:counter(step);position:absolute;top:-14px;left:50%;transform:translateX(-50%);width:32px;height:32px;border-radius:50%;background:var(--primary);color:#fff;display:flex;align-items:center;justify-content:center;font-family:var(--font-h);font-size:15px;font-weight:600}
+.step-card__icon{margin-top:6px;margin-bottom:14px;width:36px;height:36px;color:var(--primary);margin-left:auto;margin-right:auto}
+.step-card__title{font-family:var(--font-h);font-size:18px;font-weight:600;margin-bottom:4px}
+.step-card__text{font-size:13px;color:var(--t-sec);line-height:1.5}
+/* offer */
+.offer{background:linear-gradient(135deg,var(--t) 0%,#25201c 100%);color:#fff;text-align:center;position:relative;overflow:hidden}
+.offer::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 25% 50%,rgba(61,79,61,.3),transparent 65%),radial-gradient(ellipse at 75% 50%,rgba(212,163,115,.12),transparent 55%);pointer-events:none}
+.offer .section__title{color:#fff}
+.offer .section__sub{color:rgba(255,255,255,.55);margin-left:auto;margin-right:auto;max-width:640px}
+.offer__cards{display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:700px;margin:0 auto 36px;text-align:left}
+.offer__card{padding:24px 28px;border-radius:var(--rad);background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1)}
+.offer__card-title{font-family:var(--font-h);font-size:20px;color:var(--warm);margin-bottom:4px}
+.offer__card-text{font-size:14px;color:rgba(255,255,255,.6);line-height:1.5}
+.offer__old-price{display:flex;justify-content:center;align-items:center;gap:16px;margin-bottom:20px;flex-wrap:wrap}
+.offer__old-price span{font-size:18px;color:rgba(255,255,255,.4);text-decoration:line-through}
+.offer__old-price strong{font-family:var(--font-h);font-size:32px;color:var(--warm)}
+.offer__old-price small{font-size:14px;color:rgba(255,255,255,.5);background:rgba(255,255,255,.08);padding:4px 12px;border-radius:100px}
+.offer__actions{display:flex;flex-wrap:wrap;justify-content:center;gap:12px}
 /* reviews */
-.reviews__slider{overflow:hidden;position:relative}
-.reviews__track{display:flex;gap:24px;transition:transform .5s var(--ease);cursor:grab}
-.reviews__track:active{cursor:grabbing}
-.review-card{min-width:calc(33.333% - 16px);flex-shrink:0;background:var(--s);border-radius:var(--rad);padding:32px;box-shadow:var(--shadow);transition:all var(--dur) var(--ease)}
+.reviews{background:var(--b)}
+.reviews__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.review-card{padding:28px;background:var(--s);border-radius:var(--rad);box-shadow:var(--shadow);transition:all var(--dur) var(--ease)}
 .review-card:hover{box-shadow:var(--shadow-h)}
-.review-card__stars{display:flex;gap:4px;margin-bottom:16px;color:var(--gold);font-size:16px}
-.review-card__text{font-size:15px;color:var(--t-sec);line-height:1.6;margin-bottom:20px;font-style:italic}
-.review-card__author{display:flex;align-items:center;gap:12px}
-.review-card__avatar{width:44px;height:44px;border-radius:50%;object-fit:cover;background:var(--b-alt)}
-.review-card__name{font-size:14px;font-weight:500;color:var(--t)}
-.review-card__role{font-size:12px;color:var(--t-mut)}
-.reviews__controls{display:flex;justify-content:center;gap:12px;margin-top:32px}
-.reviews__arrow{width:44px;height:44px;border-radius:50%;border:1.5px solid var(--border);display:flex;align-items:center;justify-content:center;transition:all var(--dur);color:var(--t-sec)}
-.reviews__arrow:hover{border-color:var(--t);color:var(--t);background:var(--s)}
-/* FAQ */
-.faq__list{max-width:720px;margin:0 auto}
-.faq-item{border-bottom:1px solid var(--border);padding:20px 0}
-.faq-item__question{display:flex;justify-content:space-between;align-items:center;width:100%;text-align:left;font-size:17px;font-weight:500;color:var(--t);padding:4px 0;transition:color var(--dur)}
-.faq-item__question:hover{color:var(--accent)}
-.faq-item__icon{width:20px;height:20px;flex-shrink:0;transition:transform var(--dur);color:var(--t-sec)}
+.review-card__stars{color:var(--gold);font-size:15px;margin-bottom:12px}
+.review-card__text{font-size:14px;color:var(--t-sec);line-height:1.6;margin-bottom:16px;font-style:italic}
+.review-card__author{display:flex;align-items:center;gap:10px}
+.review-card__avatar{width:40px;height:40px;border-radius:50%;object-fit:cover;background:var(--b-alt)}
+.review-card__info{font-size:13px;font-weight:500;color:var(--t)}
+.review-card__info small{display:block;font-weight:400;color:var(--t-mut);font-size:12px}
+/* faq */
+.faq{padding:var(--pad);background:var(--b-alt)}
+.faq__list{max-width:700px;margin:0 auto}
+.faq-item{border-bottom:1px solid var(--border);padding:18px 0}
+.faq-item__q{display:flex;justify-content:space-between;align-items:center;width:100%;text-align:left;font-size:16px;font-weight:500;color:var(--t);padding:4px 0;transition:color var(--dur)}
+.faq-item__q:hover{color:var(--primary)}
+.faq-item__icon{width:18px;height:18px;flex-shrink:0;transition:transform var(--dur);color:var(--t-sec)}
 .faq-item.open .faq-item__icon{transform:rotate(45deg)}
-.faq-item__answer{overflow:hidden;max-height:0;transition:max-height .5s var(--ease),padding .3s var(--ease)}
-.faq-item.open .faq-item__answer{max-height:300px;padding-top:12px}
-.faq-item__answer-inner{font-size:15px;color:var(--t-sec);line-height:1.6}
+.faq-item__a{overflow:hidden;max-height:0;transition:max-height .45s var(--ease),padding .3s var(--ease)}
+.faq-item.open .faq-item__a{max-height:300px;padding-top:10px}
+.faq-item__a-inner{font-size:14px;color:var(--t-sec);line-height:1.6}
 /* cta */
-.cta{background:linear-gradient(135deg,var(--t) 0%,#2a231e 100%);color:#fff;text-align:center;position:relative;overflow:hidden}
-.cta::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 30% 50%,rgba(74,93,62,.2),transparent 70%),radial-gradient(ellipse at 70% 50%,rgba(184,115,90,.1),transparent 60%);pointer-events:none}
-.cta .section__title{color:#fff}
-.cta .section__sub{color:rgba(255,255,255,.6);margin-left:auto;margin-right:auto}
-.cta__actions{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-bottom:32px}
-.cta__phone{display:inline-flex;align-items:center;gap:8px;font-size:22px;font-weight:500;color:rgba(255,255,255,.8);transition:color var(--dur);font-family:var(--font-h)}
-.cta__phone:hover{color:#fff}
-.cta__form{max-width:420px;margin:0 auto;display:flex;flex-direction:column;gap:12px}
-.cta__form input{padding:14px 20px;border-radius:100px;border:1.5px solid rgba(255,255,255,.15);background:rgba(255,255,255,.06);color:#fff;font-size:15px;font-family:var(--font-b);outline:none;transition:border-color var(--dur),background var(--dur)}
-.cta__form input::placeholder{color:rgba(255,255,255,.4)}
-.cta__form input:focus{border-color:rgba(255,255,255,.4);background:rgba(255,255,255,.1)}
-.cta__form .btn-primary{background:var(--terracotta)}
-.cta__form .btn-primary:hover{background:var(--terracotta-h)}
-.cta__note{font-size:13px;color:rgba(255,255,255,.35);margin-top:12px}
+.cta{padding:100px 24px;background:var(--s);text-align:center}
+.cta .section__sub{margin-left:auto;margin-right:auto}
+.cta__actions{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-bottom:28px}
+.cta__phone{display:inline-flex;align-items:center;gap:8px;font-size:20px;font-weight:500;color:var(--t-sec);transition:color var(--dur);font-family:var(--font-h)}
+.cta__phone:hover{color:var(--t)}
+.cta__form{max-width:400px;margin:0 auto;display:flex;flex-direction:column;gap:10px}
+.cta__form-row{display:flex;gap:10px}
+.cta__form input{flex:1;padding:13px 18px;border-radius:100px;border:1.5px solid var(--border);background:var(--b);color:var(--t);font-size:14px;font-family:var(--font-b);outline:none;transition:border-color var(--dur)}
+.cta__form input::placeholder{color:var(--t-mut)}
+.cta__form input:focus{border-color:var(--primary)}
+.cta__form .btn-primary{flex-shrink:0}
+.cta__note{font-size:12px;color:var(--t-mut);margin-top:10px}
 /* footer */
-.footer{padding:64px 24px 32px;background:var(--t);color:rgba(255,255,255,.7)}
-.footer__grid{max-width:var(--max-w);margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px}
-.footer__brand{font-family:var(--font-h);font-size:20px;font-weight:600;color:#fff;margin-bottom:8px}
-.footer__about{font-size:14px;line-height:1.6;color:rgba(255,255,255,.5);max-width:280px}
-.footer__title{font-size:13px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:16px}
-.footer__links{display:flex;flex-direction:column;gap:10px}
-.footer__links a{font-size:14px;color:rgba(255,255,255,.6);transition:color var(--dur)}
+.footer{padding:60px 24px 28px;background:var(--t);color:rgba(255,255,255,.65)}
+.footer__grid{max-width:var(--max-w);margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px}
+.footer__brand{font-family:var(--font-h);font-size:18px;font-weight:600;color:#fff;margin-bottom:6px}
+.footer__brand small{font-weight:400;font-size:13px;color:rgba(255,255,255,.35)}
+.footer__about{font-size:13px;line-height:1.6;color:rgba(255,255,255,.45);max-width:260px}
+.footer__title{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:14px}
+.footer__links{display:flex;flex-direction:column;gap:8px}
+.footer__links a{font-size:13px;color:rgba(255,255,255,.55);transition:color var(--dur)}
 .footer__links a:hover{color:#fff}
-.footer__bottom{border-top:1px solid rgba(255,255,255,.08);margin-top:48px;padding-top:24px;text-align:center;font-size:13px;color:rgba(255,255,255,.3)}
-/* sticky mobile bar */
+.footer__bottom{border-top:1px solid rgba(255,255,255,.07);margin-top:40px;padding-top:20px;text-align:center;font-size:12px;color:rgba(255,255,255,.25)}
+/* sticky bar */
 .sticky-bar{position:fixed;bottom:0;left:0;right:0;z-index:90;display:none;background:var(--s);border-top:1px solid var(--border);padding:10px 16px;gap:8px;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
-.sticky-bar a{flex:1;display:flex;align-items:center;justify-content:center;gap:8px;padding:12px;border-radius:100px;font-size:14px;font-weight:500}
+.sticky-bar a{flex:1;display:flex;align-items:center;justify-content:center;gap:6px;padding:12px;border-radius:100px;font-size:13px;font-weight:600}
 .sticky-bar .wa{background:#25d366;color:#fff}
 .sticky-bar .tg{background:#0088cc;color:#fff}
 .sticky-bar .tel{border:1.5px solid var(--border);color:var(--t)}
-/* scroll animation */
+/* reveal */
 .reveal{opacity:0;transform:translateY(30px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
 .reveal.visible{opacity:1;transform:translateY(0)}
-.reveal-delay-1{transition-delay:.1s}
-.reveal-delay-2{transition-delay:.2s}
-.reveal-delay-3{transition-delay:.3s}
-.reveal-delay-4{transition-delay:.4s}
+.reveal-d1{transition-delay:.1s}
+.reveal-d2{transition-delay:.2s}
+.reveal-d3{transition-delay:.3s}
+.reveal-d4{transition-delay:.4s}
 
 /* responsive */
-@media(max-width:1024px){
-.catalog__grid{grid-template-columns:repeat(2,1fr)}
-.advantages__grid{grid-template-columns:repeat(2,1fr)}
-.materials__grid{grid-template-columns:repeat(2,1fr)}
-.howto__grid{grid-template-columns:repeat(2,1fr)}
-.footer__grid{grid-template-columns:repeat(2,1fr);gap:32px}
-.review-card{min-width:calc(50% - 12px)}
+@media(max-width:1100px){
+.products__grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:900px){
+.categories__grid{grid-template-columns:1fr}
+.category-card{min-height:280px}
+.benefits__grid{grid-template-columns:repeat(2,1fr)}
+.steps__grid{grid-template-columns:repeat(2,1fr)}
+.footer__grid{grid-template-columns:repeat(2,1fr);gap:28px}
+.reviews__grid{grid-template-columns:1fr}
+.hero__image{min-height:380px}
+.offer__cards{grid-template-columns:1fr}
 }
 @media(max-width:768px){
 .section{padding:var(--pad-m)}
 .hero__grid{grid-template-columns:1fr;gap:0}
-.hero__image{min-height:360px;order:-1;border-radius:0;margin:-24px -24px 0}
-.hero__content{padding:32px 0 48px}
+.hero__image{order:-1;border-radius:0;margin:-24px -24px 0;min-height:320px}
+.hero__content{padding:28px 0 40px}
 .hero__badges{gap:16px}
 .header__nav{display:none}
 .header__burger{display:flex}
-.catalog__grid,.advantages__grid,.materials__grid,.howto__grid{grid-template-columns:1fr}
-.footer__grid{grid-template-columns:1fr;gap:24px;text-align:center}
+.categories{padding:60px 24px}
+.products__grid{grid-template-columns:1fr}
+.benefits__grid,.steps__grid{grid-template-columns:1fr}
+.footer__grid{grid-template-columns:1fr;gap:20px;text-align:center}
 .footer__about{margin:0 auto}
-.review-card{min-width:calc(100% - 0px)}
+.cta__form-row{flex-direction:column}
 .sticky-bar{display:flex}
-.cta__phone{font-size:18px}
+.offer__old-price strong{font-size:26px}
+.reviews__grid{grid-template-columns:1fr}
 }
 </style>
 </head>
@@ -228,20 +257,22 @@ ul{list-style:none}
 
 <!-- mobile nav -->
 <nav class="mobile-nav" id="mobileNav">
-<a href="#catalog" onclick="closeMobile()">Модели</a>
-<a href="#advantages" onclick="closeMobile()">Преимущества</a>
-<a href="#materials" onclick="closeMobile()">Материалы</a>
+<a href="#sofas" onclick="closeMobile()">Диваны</a>
+<a href="#beds" onclick="closeMobile()">Кровати</a>
+<a href="#benefits" onclick="closeMobile()">Преимущества</a>
+<a href="#offer" onclick="closeMobile()">Акция</a>
 <a href="#faq" onclick="closeMobile()">FAQ</a>
 <a href="#contacts" onclick="closeMobile()">Контакты</a>
 </nav>
 
 <!-- header -->
 <header class="header" id="header">
-<a href="#" class="header__logo">ATELIER</a>
+<a href="#" class="header__logo">Asl Soft <span>// мебель для дома</span></a>
 <nav class="header__nav">
-<a href="#catalog">Модели</a>
-<a href="#advantages">Преимущества</a>
-<a href="#materials">Материалы</a>
+<a href="#sofas">Диваны</a>
+<a href="#beds">Кровати</a>
+<a href="#benefits">Преимущества</a>
+<a href="#offer">Акция</a>
 <a href="#faq">FAQ</a>
 <a href="#contacts">Контакты</a>
 </nav>
@@ -254,427 +285,489 @@ ul{list-style:none}
 <section class="hero" id="hero">
 <div class="container hero__grid">
 <div class="hero__content reveal">
-<span class="hero__badge">Индивидуальное производство</span>
-<h1 class="hero__title">Диваны ручной работы<br>для вашего интерьера</h1>
-<p class="hero__sub">Изготовим модель любого размера из премиальных тканей. Работаем с частными клиентами и дизайнерами интерьеров.</p>
+<h1 class="hero__title">Диваны и кровати Asl Soft под ваш размер, интерьер и бюджет</h1>
+<p class="hero__sub">Подберем мягкую мебель для спальни и гостиной: современные модели, натуральные ткани, понятный расчет стоимости и бесплатная доставка.</p>
+<div class="hero__tags">
+<span class="hero__tag">индивидуальные размеры</span>
+<span class="hero__tag">выбор ткани и цвета</span>
+<span class="hero__tag">от 14 дней</span>
+</div>
 <div class="hero__actions">
-<a href="#catalog" class="btn btn-primary">Получить каталог</a>
+<a href="#categories" class="btn btn-primary">Получить каталог</a>
 <a href="#cta" class="btn btn-secondary">Рассчитать стоимость</a>
 <a href="https://wa.me/79123456789" class="btn btn-whatsapp">WhatsApp</a>
 </div>
 <div class="hero__badges">
-<span class="hero__badge-item">
+<span class="hero__badge">
 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-Сроки от 14 дней
+Изготовление от 14 дней
 </span>
-<span class="hero__badge-item">
+<span class="hero__badge">
 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
 Гарантия 2 года
 </span>
-<span class="hero__badge-item">
+<span class="hero__badge">
 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/></svg>
-Любые размеры
+Бесплатная доставка
 </span>
 </div>
 </div>
-<div class="hero__image reveal reveal-delay-2">
-<img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=1000&q=80" alt="Диван в современном интерьере" loading="eager">
+<div class="hero__image reveal reveal-d2">
+<img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=1000&q=80" alt="Интерьер с мягкой мебелью Asl Soft" loading="eager">
 </div>
 </div>
 </section>
 
-<!-- 2. catalog -->
-<section class="section" id="catalog">
+<!-- 2. category picker -->
+<section class="categories" id="categories">
+<div class="section__header reveal">
+<h2 class="section__title">Выберите, что вам нужно</h2>
+<p class="section__sub">Сделаем по вашим размерам, подберем ткань и цвет. Полный каталог отправим после заявки.</p>
+</div>
+<div class="categories__grid reveal">
+<a href="#sofas" class="category-card">
+<img src="https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?auto=format&fit=crop&w=800&q=80" alt="Диваны Asl Soft" loading="lazy">
+<div class="category-card__overlay"></div>
+<div class="category-card__body">
+<h3 class="category-card__title">Диваны</h3>
+<p class="category-card__desc">Прямые, угловые, раскладные и модульные диваны для гостиной. Любые размеры и конфигурации.</p>
+<span class="category-card__btn">Смотреть модели</span>
+</div>
+</a>
+<a href="#beds" class="category-card">
+<img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=800&q=80" alt="Кровати Asl Soft" loading="lazy">
+<div class="category-card__overlay"></div>
+<div class="category-card__body">
+<h3 class="category-card__title">Кровати</h3>
+<p class="category-card__desc">Спальные места с подъемным механизмом, мягким изголовьем и ортопедическим основанием.</p>
+<span class="category-card__btn">Смотреть модели</span>
+</div>
+</a>
+</div>
+</section>
+
+<!-- 3. sofas -->
+<section class="products" id="sofas">
+<div class="container">
+<div class="products__header reveal">
+<div>
+<span class="section__label">Диваны</span>
+<h2 class="section__title">Модели для гостиной</h2>
+<p class="section__sub">Популярные модели с возможностью адаптации под любой размер и ткань.</p>
+</div>
+<a href="#cta" class="btn btn-secondary">Получить полный каталог</a>
+</div>
+<div class="products__grid">
+<div class="product-card reveal reveal-d1">
+<div class="product-card__image">
+<img src="https://images.unsplash.com/photo-1549187774-b4e9b0445a41?auto=format&fit=crop&w=600&h=450&q=80" alt="Диван Асл Софт Комфорт" loading="lazy">
+</div>
+<div class="product-card__body">
+<h3 class="product-card__title">Асл Софт Комфорт</h3>
+<div class="product-card__type">Прямой диван</div>
+<p class="product-card__desc">Глубокая посадка, съемные чехлы, подушки с наполнителем из холлофайбера.</p>
+<div class="product-card__meta">
+<span class="product-card__size">200–280 × 95 см</span>
+<span class="product-card__price">от 79 900 ₽</span>
+</div>
+<a href="#cta" class="product-card__btn">Узнать цену</a>
+</div>
+</div>
+<div class="product-card reveal reveal-d2">
+<div class="product-card__image">
+<img src="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?auto=format&fit=crop&w=600&h=450&q=80" alt="Диван Асл Софт Лофт" loading="lazy">
+<span class="product-card__badge">хит</span>
+</div>
+<div class="product-card__body">
+<h3 class="product-card__title">Асл Софт Лофт</h3>
+<div class="product-card__type">Угловой диван</div>
+<p class="product-card__desc">Вместительный бельевой ящик, удобная конфигурация для просторных гостиных.</p>
+<div class="product-card__meta">
+<span class="product-card__size">240–320 × 160 см</span>
+<span class="product-card__price">от 129 000 ₽</span>
+</div>
+<a href="#cta" class="product-card__btn">Узнать цену</a>
+</div>
+</div>
+<div class="product-card reveal reveal-d3">
+<div class="product-card__image">
+<img src="https://images.unsplash.com/photo-1567016432779-094069958ea5?auto=format&fit=crop&w=600&h=450&q=80" alt="Диван Асл Софт Слип" loading="lazy">
+</div>
+<div class="product-card__body">
+<h3 class="product-card__title">Асл Софт Слип</h3>
+<div class="product-card__type">Диван-кровать</div>
+<p class="product-card__desc">Ортопедическое основание, механизм еврокнижка, полноценное спальное место.</p>
+<div class="product-card__meta">
+<span class="product-card__size">180–220 × 95 см</span>
+<span class="product-card__price">от 94 000 ₽</span>
+</div>
+<a href="#cta" class="product-card__btn">Узнать цену</a>
+</div>
+</div>
+<div class="product-card reveal reveal-d4">
+<div class="product-card__image">
+<img src="https://images.unsplash.com/photo-1586023497996-0f69b45c7b10?auto=format&fit=crop&w=600&h=450&q=80" alt="Диван Асл Софт Модуль" loading="lazy">
+<span class="product-card__badge">новинка</span>
+</div>
+<div class="product-card__body">
+<h3 class="product-card__title">Асл Софт Модуль</h3>
+<div class="product-card__type">Модульный диван</div>
+<p class="product-card__desc">Секции переставляются под любую планировку. Можно добавить пуф или стеллаж.</p>
+<div class="product-card__meta">
+<span class="product-card__size">от 3 секций, любая конфигурация</span>
+<span class="product-card__price">от 165 000 ₽</span>
+</div>
+<a href="#cta" class="product-card__btn">Узнать цену</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- 4. beds -->
+<section class="products products--alt" id="beds">
+<div class="container">
+<div class="products__header reveal">
+<div>
+<span class="section__label">Кровати</span>
+<h2 class="section__title">Модели для спальни</h2>
+<p class="section__sub">Надежные основания, качественные материалы и аккуратный дизайн для вашей спальни.</p>
+</div>
+<a href="#cta" class="btn btn-secondary">Получить полный каталог</a>
+</div>
+<div class="products__grid">
+<div class="product-card reveal reveal-d1">
+<div class="product-card__image">
+<img src="https://images.unsplash.com/photo-1616627561955-fb1e9f2f9e7f?auto=format&fit=crop&w=600&h=450&q=80" alt="Кровать Асл Софт Сон" loading="lazy">
+</div>
+<div class="product-card__body">
+<h3 class="product-card__title">Асл Софт Сон</h3>
+<div class="product-card__type">С подъемным механизмом</div>
+<p class="product-card__desc">Встроенный короб для белья, ортопедическое основание, бесшумный газлифт.</p>
+<div class="product-card__meta">
+<span class="product-card__size">160×200, 180×200 см</span>
+<span class="product-card__price">от 62 000 ₽</span>
+</div>
+<a href="#cta" class="product-card__btn">Узнать цену</a>
+</div>
+</div>
+<div class="product-card reveal reveal-d2">
+<div class="product-card__image">
+<img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=600&h=450&q=80" alt="Кровать Асл Софт Минимал" loading="lazy">
+<span class="product-card__badge">хит</span>
+</div>
+<div class="product-card__body">
+<h3 class="product-card__title">Асл Софт Минимал</h3>
+<div class="product-card__type">Низкая кровать без изголовья</div>
+<p class="product-card__desc">Минималистичный дизайн, визуально увеличивает пространство спальни.</p>
+<div class="product-card__meta">
+<span class="product-card__size">140×200, 160×200 см</span>
+<span class="product-card__price">от 52 000 ₽</span>
+</div>
+<a href="#cta" class="product-card__btn">Узнать цену</a>
+</div>
+</div>
+<div class="product-card reveal reveal-d3">
+<div class="product-card__image">
+<img src="https://images.unsplash.com/photo-1596174455881-5b1e5e4e7b6a?auto=format&fit=crop&w=600&h=450&q=80" alt="Кровать Асл Софт Классик" loading="lazy">
+</div>
+<div class="product-card__body">
+<h3 class="product-card__title">Асл Софт Классик</h3>
+<div class="product-card__type">С мягким изголовьем</div>
+<p class="product-card__desc">Изголовье с каретной стяжкой или ровной обивкой, выбор ткани и цвета.</p>
+<div class="product-card__meta">
+<span class="product-card__size">160×200, 180×200 см</span>
+<span class="product-card__price">от 78 000 ₽</span>
+</div>
+<a href="#cta" class="product-card__btn">Узнать цену</a>
+</div>
+</div>
+<div class="product-card reveal reveal-d4">
+<div class="product-card__image">
+<img src="https://images.unsplash.com/photo-1583607694-99e54a22a050?auto=format&fit=crop&w=600&h=450&q=80" alt="Кровать Асл Софт Дуэт" loading="lazy">
+</div>
+<div class="product-card__body">
+<h3 class="product-card__title">Асл Софт Дуэт</h3>
+<div class="product-card__type">Двуспальная кровать</div>
+<p class="product-card__desc">Прочное основание на металлокаркасе, ортопедические ламели, два спальных места.</p>
+<div class="product-card__meta">
+<span class="product-card__size">180×200 см</span>
+<span class="product-card__price">от 96 000 ₽</span>
+</div>
+<a href="#cta" class="product-card__btn">Узнать цену</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- 5. benefits -->
+<section class="benefits section" id="benefits">
 <div class="container">
 <div class="section__header reveal">
-<span class="section__label">Каталог</span>
-<h2 class="section__title">Наши модели</h2>
-<p class="section__sub">Каждый диван изготавливается под ваш интерьер. Выберите понравившуюся модель — адаптируем размеры, ткань и цвет.</p>
+<span class="section__label">Преимущества</span>
+<h2 class="section__title">Почему выбирают Asl Soft</h2>
+<p class="section__sub">Производство мягкой мебель, в которой удобно жить каждый день. Подбираем под ваш образ жизни, размеры и предпочтения.</p>
 </div>
-<div class="catalog__grid">
-<div class="catalog-card reveal reveal-delay-1">
-<div class="catalog-card__image">
-<img src="https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?auto=format&fit=crop&w=600&h=450&q=80" alt="Модель Астория" loading="lazy">
+<div class="benefits__grid">
+<div class="benefit-card reveal reveal-d1">
+<div class="benefit-card__icon">
+<svg width="44" height="44" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M24 4L6 14v20l18 10 18-10V14L24 4z"/><path d="M24 24v20"/><path d="M6 14l18 10 18-10"/></svg>
 </div>
-<div class="catalog-card__body">
-<h3 class="catalog-card__title">Астория</h3>
-<p class="catalog-card__desc">Классический диван с глубокой посадкой и съемными чехлами. Идеален для просторных гостиных.</p>
-<div class="catalog-card__meta">
-<span class="catalog-card__size">220 × 95 × 85 см</span>
-<span class="catalog-card__price">от 89 900 ₽</span>
+<h3 class="benefit-card__title">Изготовление под ваши размеры</h3>
+<p class="benefit-card__text">Не подходит стандартная модель? Изменим длину, глубину и высоту под вашу комнату. Нестандартные размеры не удорожают заказ.</p>
 </div>
-<a href="#cta" class="catalog-card__btn">Запросить расчет</a>
+<div class="benefit-card reveal reveal-d2">
+<div class="benefit-card__icon">
+<svg width="44" height="44" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="32" cy="18" r="12"/><circle cx="16" cy="30" r="12"/><circle cx="32" cy="42" r="6"/></svg>
 </div>
+<h3 class="benefit-card__title">Более 50 тканей и оттенков</h3>
+<p class="benefit-card__text">Велюр, рогожка, экокожа, шенилл, лен, бархат — подберем материал под ваш интерьер и образ жизни. Пришлем образцы на дом.</p>
 </div>
-<div class="catalog-card reveal reveal-delay-2">
-<div class="catalog-card__image">
-<img src="https://images.unsplash.com/photo-1549187774-b4e9b0445a41?auto=format&fit=crop&w=600&h=450&q=80" alt="Модель Монро" loading="lazy">
+<div class="benefit-card reveal reveal-d3">
+<div class="benefit-card__icon">
+<svg width="44" height="44" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="6" y="6" width="36" height="36" rx="4"/><path d="M6 18h36"/><path d="M18 6v36"/></svg>
 </div>
-<div class="catalog-card__body">
-<h3 class="catalog-card__title">Монро</h3>
-<p class="catalog-card__desc">Компактный диван для небольших комнат. Лаконичный дизайн с акцентными подушками.</p>
-<div class="catalog-card__meta">
-<span class="catalog-card__size">180 × 90 × 80 см</span>
-<span class="catalog-card__price">от 72 500 ₽</span>
+<h3 class="benefit-card__title">Помощь с выбором модели</h3>
+<p class="benefit-card__text">Дизайнер бесплатно подберет конфигурацию, ткань и цвет под ваш бюджет. Пришлет 3D-визуализацию до производства.</p>
 </div>
-<a href="#cta" class="catalog-card__btn">Запросить расчет</a>
+<div class="benefit-card reveal reveal-d1">
+<div class="benefit-card__icon">
+<svg width="44" height="44" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="28" width="40" height="16" rx="3"/><path d="M12 28V16a8 8 0 018-8h8a8 8 0 018 8v12"/><circle cx="16" cy="40" r="4"/><circle cx="32" cy="40" r="4"/></svg>
 </div>
+<h3 class="benefit-card__title">Доставка и сборка</h3>
+<p class="benefit-card__text">Бесплатно доставим по городу от 80 000 ₽, поднимем на этаж, соберем и уберем упаковку. В регионах — надежная отправка.</p>
 </div>
-<div class="catalog-card reveal reveal-delay-3">
-<div class="catalog-card__image">
-<img src="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?auto=format&fit=crop&w=600&h=450&q=80" alt="Модель Бруклин" loading="lazy">
+<div class="benefit-card reveal reveal-d2">
+<div class="benefit-card__icon">
+<svg width="44" height="44" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M24 4v8"/><path d="M24 36v8"/><path d="M4 24h8"/><path d="M36 24h8"/><path d="M10.34 10.34l5.66 5.66"/><path d="M32 32l5.66 5.66"/><path d="M10.34 37.66l5.66-5.66"/><path d="M32 16l5.66-5.66"/></svg>
 </div>
-<div class="catalog-card__body">
-<h3 class="catalog-card__title">Бруклин</h3>
-<p class="catalog-card__desc">Угловой диван с вместительным бельевым ящиком и местом для хранения подушек.</p>
-<div class="catalog-card__meta">
-<span class="catalog-card__size">260 × 160 × 85 см</span>
-<span class="catalog-card__price">от 145 000 ₽</span>
+<h3 class="benefit-card__title">Гарантия 2 года</h3>
+<p class="benefit-card__text">После гарантии — постгарантийное обслуживание. Ремонтируем и восстанавливаем мягкую мебель даже спустя годы.</p>
 </div>
-<a href="#cta" class="catalog-card__btn">Запросить расчет</a>
+<div class="benefit-card reveal reveal-d3">
+<div class="benefit-card__icon">
+<svg width="44" height="44" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="8" y="6" width="32" height="36" rx="4"/><path d="M20 6v36"/><path d="M8 18h32"/></svg>
 </div>
-</div>
-<div class="catalog-card reveal reveal-delay-1">
-<div class="catalog-card__image">
-<img src="https://images.unsplash.com/photo-1567016432779-094069958ea5?auto=format&fit=crop&w=600&h=450&q=80" alt="Модель Сохо" loading="lazy">
-</div>
-<div class="catalog-card__body">
-<h3 class="catalog-card__title">Сохо</h3>
-<p class="catalog-card__desc">Диван-кровать с ортопедическим основанием и механизмом трансформации еврокнижка.</p>
-<div class="catalog-card__meta">
-<span class="catalog-card__size">200 × 95 × 90 см</span>
-<span class="catalog-card__price">от 108 000 ₽</span>
-</div>
-<a href="#cta" class="catalog-card__btn">Запросить расчет</a>
-</div>
-</div>
-<div class="catalog-card reveal reveal-delay-2">
-<div class="catalog-card__image">
-<img src="https://images.unsplash.com/photo-1583607694-99e54a22a050?auto=format&fit=crop&w=600&h=450&q=80" alt="Модель Челси" loading="lazy">
-</div>
-<div class="catalog-card__body">
-<h3 class="catalog-card__title">Челси</h3>
-<p class="catalog-card__desc">Полукруглый диван для просторных гостиных. Эффектный элемент интерьера.</p>
-<div class="catalog-card__meta">
-<span class="catalog-card__size">240 × 100 × 80 см</span>
-<span class="catalog-card__price">от 132 000 ₽</span>
-</div>
-<a href="#cta" class="catalog-card__btn">Запросить расчет</a>
-</div>
-</div>
-<div class="catalog-card reveal reveal-delay-3">
-<div class="catalog-card__image">
-<img src="https://images.unsplash.com/photo-1586023497996-0f69b45c7b10?auto=format&fit=crop&w=600&h=450&q=80" alt="Модель Хэмптон" loading="lazy">
-</div>
-<div class="catalog-card__body">
-<h3 class="catalog-card__title">Хэмптон</h3>
-<p class="catalog-card__desc">Модульный диван с возможностью перестановки секций под любую планировку.</p>
-<div class="catalog-card__meta">
-<span class="catalog-card__size">300 × 95 × 85 см</span>
-<span class="catalog-card__price">от 178 000 ₽</span>
-</div>
-<a href="#cta" class="catalog-card__btn">Запросить расчет</a>
-</div>
+<h3 class="benefit-card__title">Свое производство</h3>
+<p class="benefit-card__text">Работаем без посредников: сами закупаем материалы, контролируем каждый этап и отвечаем за качество.</p>
 </div>
 </div>
 </div>
 </section>
 
-<!-- 3. advantages -->
-<section class="section advantages" id="advantages">
+<!-- 6. steps -->
+<section class="steps" id="steps">
 <div class="container">
 <div class="section__header reveal">
-<span class="section__label">Почему мы</span>
-<h2 class="section__title">Преимущества работы с нами</h2>
-<p class="section__sub">Мы производим мебель, которая служит годами. Каждый этап — от замера до доставки — под контролем.</p>
+<span class="section__label">Как заказать</span>
+<h2 class="section__title">Путь от заявки до готового изделия</h2>
+<p class="section__sub">Простой и прозрачный процесс без скрытых этапов. Все обсуждаем заранее.</p>
 </div>
-<div class="advantages__grid">
-<div class="advantage-card reveal reveal-delay-1">
-<div class="advantage-card__icon">
-<svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M24 4L6 14v20l18 10 18-10V14L24 4z"/><path d="M24 24v20"/><path d="M6 14l18 10 18-10"/></svg>
+<div class="steps__grid">
+<div class="step-card reveal reveal-d1">
+<div class="step-card__icon">
+<svg width="36" height="36" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 28l4-4 4 4 8-8 4 4 4-4"/><path d="M4 12h32v20H4z"/></svg>
 </div>
-<h3 class="advantage-card__title">Изготовление на заказ</h3>
-<p class="advantage-card__text">Любая конфигурация, размеры и ткань под ваш интерьер. Адаптируем любую модель из каталога.</p>
+<h3 class="step-card__title">Заявка</h3>
+<p class="step-card__text">Оставляете заявку на сайте или пишете в WhatsApp. Отвечаем в течение часа в рабочее время.</p>
 </div>
-<div class="advantage-card reveal reveal-delay-2">
-<div class="advantage-card__icon">
-<svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="24" cy="24" r="20"/><path d="M16 24l5 5 11-11"/></svg>
+<div class="step-card reveal reveal-d2">
+<div class="step-card__icon">
+<svg width="36" height="36" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="20" cy="20" r="16"/><path d="M20 12v8l6 4"/></svg>
 </div>
-<h3 class="advantage-card__title">Премиальные материалы</h3>
-<p class="advantage-card__text">Только проверенные ткани и наполнители от европейских поставщиков. Даем полную гарантию на материалы.</p>
+<h3 class="step-card__title">Консультация</h3>
+<p class="step-card__text">Обсуждаем размеры, стиль, бюджет. Подбираем модель и ткань. Присылаем предварительный расчет.</p>
 </div>
-<div class="advantage-card reveal reveal-delay-3">
-<div class="advantage-card__icon">
-<svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="28" width="40" height="16" rx="3"/><path d="M12 28V16a8 8 0 018-8h8a8 8 0 018 8v12"/><circle cx="16" cy="40" r="4"/><circle cx="32" cy="40" r="4"/></svg>
+<div class="step-card reveal reveal-d3">
+<div class="step-card__icon">
+<svg width="36" height="36" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="8" y="6" width="24" height="28" rx="3"/><path d="M12 18h16"/></svg>
 </div>
-<h3 class="advantage-card__title">Доставка и сборка</h3>
-<p class="advantage-card__text">Бесплатно по городу. Аккуратно привезем, поднимем на этаж и соберем. Полностью готовый к использованию диван.</p>
+<h3 class="step-card__title">Производство</h3>
+<p class="step-card__text">Изготавливаем мебель под ваш заказ. Присылаем фото готового изделия до отправки.</p>
 </div>
-<div class="advantage-card reveal reveal-delay-1">
-<div class="advantage-card__icon">
-<svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M24 4v8"/><path d="M24 36v8"/><path d="M4 24h8"/><path d="M36 24h8"/><path d="M10.34 10.34l5.66 5.66"/><path d="M32 32l5.66 5.66"/><path d="M10.34 37.66l5.66-5.66"/><path d="M32 16l5.66-5.66"/></svg>
+<div class="step-card reveal reveal-d4">
+<div class="step-card__icon">
+<svg width="36" height="36" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="22" width="32" height="14" rx="3"/><path d="M10 22V12a6 6 0 016-6h8a6 6 0 016 6v10"/><circle cx="14" cy="34" r="3"/><circle cx="26" cy="34" r="3"/></svg>
 </div>
-<h3 class="advantage-card__title">Гарантия 2 года</h3>
-<p class="advantage-card__text">Полное постгарантийное обслуживание. Ремонтируем и восстанавливаем мебель даже после окончания срока гарантии.</p>
-</div>
-<div class="advantage-card reveal reveal-delay-2">
-<div class="advantage-card__icon">
-<svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 32h16"/><path d="M24 16v16"/><rect x="8" y="8" width="32" height="32" rx="4"/></svg>
-</div>
-<h3 class="advantage-card__title">Помощь с выбором</h3>
-<p class="advantage-card__text">Дизайнер подберет модель, размер и ткань под ваш бюджет. Поможем вписать диван в любой интерьер.</p>
-</div>
-<div class="advantage-card reveal reveal-delay-3">
-<div class="advantage-card__icon">
-<svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="8" y="6" width="32" height="36" rx="4"/><path d="M20 6v36"/><path d="M8 18h32"/><path d="M8 30h32"/></svg>
-</div>
-<h3 class="advantage-card__title">Собственное производство</h3>
-<p class="advantage-card__text">Контролируем качество на каждом этапе. Без посредников — работаем напрямую с заказчиком.</p>
+<h3 class="step-card__title">Доставка</h3>
+<p class="step-card__text">Привозим, собираем, убираем упаковку. Показываем, как ухаживать за мебелью.</p>
 </div>
 </div>
 </div>
 </section>
 
-<!-- 4. materials -->
-<section class="section" id="materials">
+<!-- 7. offer -->
+<section class="offer section" id="offer">
 <div class="container">
-<div class="section__header reveal">
-<span class="section__label">Материалы</span>
-<h2 class="section__title">Ткани и материалы</h2>
-<p class="section__sub">Более 50 вариантов тканей и расцветок. Поможем выбрать под ваш образ жизни и интерьер.</p>
+<div class="reveal">
+<span class="section__label" style="background:rgba(255,255,255,.08);color:rgba(255,255,255,.55)">Ваша выгода</span>
+<h2 class="section__title">Экономия до 15 000 ₽<br>при заказе до конца месяца</h2>
+<p class="section__sub">Выберите любую модель из каталога и получите бесплатный подбор ткани, расчет стоимости за 15 минут и фиксированную скидку.</p>
+<div class="offer__cards">
+<div class="offer__card">
+<div class="offer__card-title">Бесплатный подбор ткани</div>
+<div class="offer__card-text">Пришлем образцы материалов на дом или подберем онлайн. Никакой доплаты за консультацию дизайнера.</div>
 </div>
-<div class="materials__grid">
-<div class="material-card reveal reveal-delay-1">
-<div class="material-card__image">
-<img src="https://images.unsplash.com/photo-1513407030348-c983a97b98d8?auto=format&fit=crop&w=400&h=400&q=80" alt="Велюр" loading="lazy">
-</div>
-<div class="material-card__body">
-<h3 class="material-card__title">Велюр</h3>
-<p class="material-card__desc">Мягкая бархатистая ткань с благородным блеском. Устойчива к истиранию и приятна на ощупь. Рекомендуем для гостиных.</p>
-</div>
-</div>
-<div class="material-card reveal reveal-delay-2">
-<div class="material-card__image">
-<img src="https://images.unsplash.com/photo-1563974912781-15611e3b5241?auto=format&fit=crop&w=400&h=400&q=80" alt="Рогожка" loading="lazy">
-</div>
-<div class="material-card__body">
-<h3 class="material-card__title">Рогожка</h3>
-<p class="material-card__desc">Прочная натуральная ткань с характерным плетением. Неприхотлива в уходе, подходит для домов с детьми и животными.</p>
+<div class="offer__card">
+<div class="offer__card-title">Подарок при заказе</div>
+<div class="offer__card-text">Подъемный механизм или бельевой ящик в подарок при заказе комплекта «диван + кровать».</div>
 </div>
 </div>
-<div class="material-card reveal reveal-delay-3">
-<div class="material-card__image">
-<img src="https://images.unsplash.com/photo-1599347945091-b0e6f0f5c5b9?auto=format&fit=crop&w=400&h=400&q=80" alt="Экокожа" loading="lazy">
+<div class="offer__old-price">
+<span>54 900 ₽</span>
+<strong>39 900 ₽</strong>
+<small>экономия 15 000 ₽</small>
 </div>
-<div class="material-card__body">
-<h3 class="material-card__title">Экокожа</h3>
-<p class="material-card__desc">Практичный материал премиум-класса. Легко чистится, не выцветает, сохраняет вид долгие годы. Отличный выбор для кухни.</p>
-</div>
+<p style="font-size:13px;color:rgba(255,255,255,.35);margin-bottom:24px">Цена указана для модели Асл Софт Сон при заказе до конца месяца. Акция не суммируется с другими предложениями.</p>
+<div class="offer__actions">
+<a href="https://wa.me/79123456789" class="btn btn-warm">Получить каталог со скидкой</a>
+<a href="#cta" class="btn btn-outline-light">Рассчитать стоимость</a>
 </div>
 </div>
 </div>
 </section>
 
-<!-- 5. howto -->
-<section class="section howto" id="howto">
-<div class="container">
-<div class="section__header reveal">
-<span class="section__label">Процесс</span>
-<h2 class="section__title">Как мы работаем</h2>
-<p class="section__sub">Прозрачный процесс от заявки до готового дивана в вашей гостиной.</p>
-</div>
-<div class="howto__grid">
-<div class="howto__step reveal reveal-delay-1">
-<div class="howto__step-icon">
-<svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 28l4-4 4 4 8-8 4 4 4-4"/><path d="M4 12h32v20H4z"/></svg>
-</div>
-<h3 class="howto__step-title">Заявка</h3>
-<p class="howto__step-text">Оставляете заявку на сайте или пишете в WhatsApp или Telegram. Мы свяжемся в течение часа.</p>
-</div>
-<div class="howto__step reveal reveal-delay-2">
-<div class="howto__step-icon">
-<svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="20" cy="20" r="16"/><path d="M20 12v8l6 4"/></svg>
-</div>
-<h3 class="howto__step-title">Проект</h3>
-<p class="howto__step-text">Обсуждаем модель, уточняем размеры, подбираем ткань и цвет. Согласовываем стоимость и сроки.</p>
-</div>
-<div class="howto__step reveal reveal-delay-3">
-<div class="howto__step-icon">
-<svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="8" y="6" width="24" height="28" rx="3"/><path d="M12 18h16"/><path d="M16 12h8"/></svg>
-</div>
-<h3 class="howto__step-title">Производство</h3>
-<p class="howto__step-text">Изготавливаем диван под ваш заказ. Присылаем фото процесса и готового изделия перед доставкой.</p>
-</div>
-<div class="howto__step reveal reveal-delay-4">
-<div class="howto__step-icon">
-<svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="22" width="32" height="14" rx="3"/><path d="M10 22V12a6 6 0 016-6h8a6 6 0 016 6v10"/><circle cx="14" cy="34" r="3"/><circle cx="26" cy="34" r="3"/></svg>
-</div>
-<h3 class="howto__step-title">Доставка</h3>
-<p class="howto__step-text">Привозим и собираем в удобное для вас время. Убираем упаковку, показываем, как ухаживать за диваном.</p>
-</div>
-</div>
-</div>
-</section>
-
-<!-- 6. reviews -->
-<section class="section" id="reviews">
+<!-- 8. reviews -->
+<section class="section reviews" id="reviews">
 <div class="container">
 <div class="section__header reveal">
 <span class="section__label">Отзывы</span>
-<h2 class="section__title">Реальные проекты</h2>
-<p class="section__sub">Более 200 семей выбрали наши диваны. Вот несколько проектов, которыми мы гордимся.</p>
+<h2 class="section__title">Реальные отзывы</h2>
+<p class="section__sub">Более 300 семей выбрали Asl Soft. Вот что говорят о нашей мебели.</p>
 </div>
-<div class="reviews__slider reveal" id="slider">
-<div class="reviews__track" id="track">
-<div class="review-card">
+<div class="reviews__grid">
+<div class="review-card reveal reveal-d1">
 <div class="review-card__stars">★★★★★</div>
-<p class="review-card__text">«Заказали угловой диван по индивидуальным размерам. Подобрали ткань, которая идеально подошла под стены. Доставили на день раньше срока. Качество отличное — всем рекомендую.»</p>
+<p class="review-card__text">«Заказывала диван Асл Софт Комфорт в гостиную. Переживала, что не подойдет по размеру — оказалось зря. Сделали по моим замерам, идеально встал. Ткань выбрала велюр — выглядит дорого, кошка не дерет. Спасибо!»</p>
 <div class="review-card__author">
-<img class="review-card__avatar" src="https://images.unsplash.com/photo-1599566150163-29194dcaad36?auto=format&fit=crop&w=88&h=88&q=80" alt="Елена" loading="lazy">
-<div>
-<div class="review-card__name">Елена</div>
-<div class="review-card__role">диван Астория, гостиная 22 м²</div>
+<img class="review-card__avatar" src="https://images.unsplash.com/photo-1599566150163-29194dcaad36?auto=format&fit=crop&w=80&h=80&q=80" alt="Екатерина" loading="lazy">
+<div class="review-card__info">Екатерина <small>диван Комфорт, 2 месяца</small></div>
 </div>
 </div>
-</div>
-<div class="review-card">
+<div class="review-card reveal reveal-d2">
 <div class="review-card__stars">★★★★★</div>
-<p class="review-card__text">«Искали компактный диван для кухни-гостиной. Посоветовали модель Монро — идеально вписалась. Очень понравилась консультация, помогли с тканью. Спасибо!»</p>
+<p class="review-card__text">«Взяли кровать с подъемным механизмом. Очень удобно, что внутри можно хранить одеяла и подушки. Механизм мягкий, не скрипит. Привезли, собрали за час. Ребенок прыгает — каркас держит отлично.»</p>
 <div class="review-card__author">
-<img class="review-card__avatar" src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=88&h=88&q=80" alt="Анна" loading="lazy">
-<div>
-<div class="review-card__name">Анна</div>
-<div class="review-card__role">диван Монро, кухня-гостиная 18 м²</div>
+<img class="review-card__avatar" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=80&h=80&q=80" alt="Андрей" loading="lazy">
+<div class="review-card__info">Андрей <small>кровать Сон, 3 месяца</small></div>
 </div>
 </div>
-</div>
-<div class="review-card">
+<div class="review-card reveal reveal-d3">
 <div class="review-card__stars">★★★★★</div>
-<p class="review-card__text">«Брали модульный диван Хэмптон. Очень удобно, что можно переставлять секции. Использовали экокожу — дети и кошка не страшны. Выглядит дорого, спасибо за работу.»</p>
+<p class="review-card__text">«Долго искали модульный диван в новую квартиру. Нравится, что можно менять конфигурацию. Помогли с планировкой, подобрали экокожу — практично для семьи с детьми. Доставили даже раньше срока.»</p>
 <div class="review-card__author">
-<img class="review-card__avatar" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=88&h=88&q=80" alt="Михаил" loading="lazy">
-<div>
-<div class="review-card__name">Михаил</div>
-<div class="review-card__role">диван Хэмптон, гостиная 28 м²</div>
+<img class="review-card__avatar" src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=80&h=80&q=80" alt="Ольга" loading="lazy">
+<div class="review-card__info">Ольга <small>диван Модуль, 1 месяц</small></div>
 </div>
 </div>
-</div>
-</div>
-</div>
-<div class="reviews__controls">
-<button class="reviews__arrow" id="prevReview" aria-label="Назад">
-<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
-</button>
-<button class="reviews__arrow" id="nextReview" aria-label="Вперед">
-<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
-</button>
 </div>
 </div>
 </section>
 
-<!-- 7. FAQ -->
-<section class="section" id="faq">
+<!-- 9. faq -->
+<section class="faq" id="faq">
 <div class="container">
 <div class="section__header reveal">
-<span class="section__label">Вопросы</span>
-<h2 class="section__title">Часто задаваемые вопросы</h2>
-<p class="section__sub">Ответили на самые популярные вопросы. Если не нашли свой — напишите нам, ответим в течение часа.</p>
+<span class="section__label">FAQ</span>
+<h2 class="section__title">Частые вопросы</h2>
+<p class="section__sub">Отвечаем на самые распространенные вопросы. Не нашли свой — напишите в чат, ответим за 15 минут.</p>
 </div>
 <div class="faq__list reveal">
 <div class="faq-item">
-<button class="faq-item__question" onclick="toggleFaq(this)">
-<span>Какие сроки изготовления?</span>
-<svg class="faq-item__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+<button class="faq-item__q" onclick="toggleFaq(this)">
+<span>Можно ли сделать по моим размерам?</span>
+<svg class="faq-item__icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
 </button>
-<div class="faq-item__answer">
-<div class="faq-item__answer-inner">От 14 рабочих дней, в зависимости от сложности модели и текущей загрузки производства. Точные сроки называем после согласования проекта.</div>
+<div class="faq-item__a">
+<div class="faq-item__a-inner">Да, это основная специализация Asl Soft. Адаптируем любую модель под размеры вашей комнаты. Изменение размеров обычно не влияет на стоимость.</div>
 </div>
 </div>
 <div class="faq-item">
-<button class="faq-item__question" onclick="toggleFaq(this)">
-<span>Можно ли изменить размеры дивана?</span>
-<svg class="faq-item__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-</button>
-<div class="faq-item__answer">
-<div class="faq-item__answer-inner">Да, мы изготавливаем диваны по вашим размерам. Увеличиваем или уменьшаем длину, глубину и высоту. Изменение размеров, как правило, не влияет на стоимость.</div>
-</div>
-</div>
-<div class="faq-item">
-<button class="faq-item__question" onclick="toggleFaq(this)">
+<button class="faq-item__q" onclick="toggleFaq(this)">
 <span>Какие ткани доступны?</span>
-<svg class="faq-item__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+<svg class="faq-item__icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
 </button>
-<div class="faq-item__answer">
-<div class="faq-item__answer-inner">Более 50 вариантов: велюр, рогожка, экокожа, шенилл, бархат, натуральный лен, микровелюр и другие. Можем прислать каталог с образцами тканей на почту или показать вживую.</div>
+<div class="faq-item__a">
+<div class="faq-item__a-inner">Более 50 вариантов: велюр, рогожка, экокожа, шенилл, бархат, лен, микровелюр, флок. Пришлем каталог с образцами или покажем в шоуруме.</div>
 </div>
 </div>
 <div class="faq-item">
-<button class="faq-item__question" onclick="toggleFaq(this)">
-<span>Есть ли доставка в другие города?</span>
-<svg class="faq-item__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+<button class="faq-item__q" onclick="toggleFaq(this)">
+<span>Сколько длится изготовление?</span>
+<svg class="faq-item__icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
 </button>
-<div class="faq-item__answer">
-<div class="faq-item__answer-inner">Бесплатная доставка и сборка по городу при заказе от 80 000 ₽. В регионы отправляем проверенными транспортными компаниями. Упаковываем надежно — ни одного случая повреждения.</div>
+<div class="faq-item__a">
+<div class="faq-item__a-inner">От 14 рабочих дней. Срок зависит от сложности модели и загрузки производства. Точную дату называем после согласования заказа.</div>
 </div>
 </div>
 <div class="faq-item">
-<button class="faq-item__question" onclick="toggleFaq(this)">
-<span>Какая предоплата требуется?</span>
-<svg class="faq-item__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+<button class="faq-item__q" onclick="toggleFaq(this)">
+<span>Есть ли доставка и сборка?</span>
+<svg class="faq-item__icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
 </button>
-<div class="faq-item__answer">
-<div class="faq-item__answer-inner">Предоплата 30% после подписания договора. Остаток — после готовности и перед доставкой. Принимаем наличные, переводы и карты.</div>
+<div class="faq-item__a">
+<div class="faq-item__a-inner">Бесплатная доставка и сборка по городу при заказе от 80 000 ₽. В регионы отправляем транспортными компаниями — упаковываем надежно.</div>
+</div>
+</div>
+<div class="faq-item">
+<button class="faq-item__q" onclick="toggleFaq(this)">
+<span>Можно ли заказать консультацию до покупки?</span>
+<svg class="faq-item__icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+</button>
+<div class="faq-item__a">
+<div class="faq-item__a-inner">Да, консультация бесплатная. Поможем с выбором модели, ткани и цвета, пришлем предварительный расчет — без обязательств и навязывания.</div>
 </div>
 </div>
 </div>
 </div>
 </section>
 
-<!-- 8. final cta -->
-<section class="section cta" id="cta">
+<!-- 10. cta -->
+<section class="cta" id="cta">
 <div class="container">
 <div class="reveal">
-<span class="section__label" style="background:rgba(255,255,255,.08);color:rgba(255,255,255,.7)">Готовы обсудить?</span>
-<h2 class="section__title">Приезжайте в шоурум или оставьте заявку</h2>
-<p class="section__sub">Посмотрите на ткани вживую, протестируйте механизмы и получите консультацию дизайнера.</p>
+<span class="section__label">Готовы обсудить?</span>
+<h2 class="section__title">Получите каталог и расчет стоимости за 15 минут</h2>
+<p class="section__sub">Оставьте заявку, и мы подберем мягкую мебель под ваш размер, интерьер и бюджет. Без очередей и навязчивых звонков.</p>
 <div class="cta__actions">
-<a href="https://wa.me/79123456789" class="btn btn-whatsapp">Написать в WhatsApp</a>
-<a href="https://t.me/username" class="btn btn-outline-light">Написать в Telegram</a>
+<a href="https://wa.me/79123456789" class="btn btn-primary">Написать в WhatsApp</a>
+<a href="https://t.me/username" class="btn btn-secondary">Написать в Telegram</a>
 <a href="tel:+79123456789" class="cta__phone">+7 (912) 345-67-89</a>
 </div>
-<form class="cta__form" onsubmit="event.preventDefault();alert('Спасибо! Мы свяжемся с вами в ближайшее время.')">
-<input type="text" placeholder="Ваше имя" required aria-label="Имя">
-<input type="tel" placeholder="Номер телефона" required aria-label="Телефон">
-<button type="submit" class="btn btn-primary" style="width:100%">Заказать консультацию</button>
+<form class="cta__form" onsubmit="event.preventDefault();alert('Спасибо! Мы получили вашу заявку.')">
+<div class="cta__form-row">
+<input type="text" placeholder="Имя" required aria-label="Имя">
+<input type="tel" placeholder="Телефон" required aria-label="Телефон">
+</div>
+<button type="submit" class="btn btn-primary" style="width:100%">Получить каталог и расчет</button>
 </form>
-<p class="cta__note">Не беспокоим по пустякам. Только по существу.</p>
+<p class="cta__note">Не беспокоим по пустякам. Только по вашему запросу.</p>
 </div>
 </div>
 </section>
 
-<!-- 9. footer -->
+<!-- footer -->
 <footer class="footer" id="contacts">
 <div class="footer__grid">
 <div>
-<div class="footer__brand">ATELIER</div>
-<p class="footer__about">Производство диванов на заказ для современного интерьера. Работаем с частными клиентами и дизайнерами интерьеров с 2015 года.</p>
+<div class="footer__brand">Asl Soft <small>// мебель для дома</small></div>
+<p class="footer__about">Производство мягкой мебели на заказ: диваны и кровати под ваш размер, ткань и интерьер. Работаем с 2015 года.</p>
 </div>
 <div>
 <div class="footer__title">Каталог</div>
 <div class="footer__links">
-<a href="#catalog">Астория</a>
-<a href="#catalog">Монро</a>
-<a href="#catalog">Бруклин</a>
-<a href="#catalog">Сохо</a>
-<a href="#catalog">Хэмптон</a>
+<a href="#sofas">Диваны</a>
+<a href="#beds">Кровати</a>
+<a href="#cta">Получить полный каталог</a>
 </div>
 </div>
 <div>
 <div class="footer__title">Информация</div>
 <div class="footer__links">
-<a href="#advantages">Преимущества</a>
-<a href="#materials">Материалы</a>
-<a href="#howto">Как заказать</a>
+<a href="#benefits">Преимущества</a>
+<a href="#steps">Как заказать</a>
+<a href="#offer">Акция</a>
 <a href="#faq">Вопросы</a>
 </div>
 </div>
@@ -684,14 +777,14 @@ ul{list-style:none}
 <a href="tel:+79123456789">+7 (912) 345-67-89</a>
 <a href="https://wa.me/79123456789">WhatsApp</a>
 <a href="https://t.me/username">Telegram</a>
-<a href="mailto:hello@atelier-sofa.ru">hello@atelier-sofa.ru</a>
+<a href="mailto:hello@aslsoft.ru">hello@aslsoft.ru</a>
 </div>
 </div>
 </div>
-<div class="footer__bottom">© 2026 ATELIER. Все права защищены. Производство диванов на заказ.</div>
+<div class="footer__bottom">© 2026 Asl Soft. Производство мягкой мебели на заказ.</div>
 </footer>
 
-<!-- sticky mobile bar -->
+<!-- sticky bar -->
 <div class="sticky-bar">
 <a href="https://wa.me/79123456789" class="wa">WhatsApp</a>
 <a href="https://t.me/username" class="tg">Telegram</a>
@@ -699,11 +792,9 @@ ul{list-style:none}
 </div>
 
 <script>
-// header scroll
 const header=document.getElementById('header');
 window.addEventListener('scroll',()=>{header.classList.toggle('scrolled',window.scrollY>20)});
 
-// mobile nav
 function toggleMobile(){
 const nav=document.getElementById('mobileNav');
 const burger=document.getElementById('burger');
@@ -716,46 +807,16 @@ document.getElementById('burger').classList.remove('open');
 document.body.style.overflow='';
 }
 
-// scroll reveal
 const observer=new IntersectionObserver((entries)=>{
 entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible')}});
 },{threshold:.08});
 document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
 
-// faq
 function toggleFaq(btn){
 const item=btn.closest('.faq-item');
 item.classList.toggle('open');
 document.querySelectorAll('.faq-item.open').forEach(el=>{if(el!==item)el.classList.remove('open')});
 }
-
-// reviews slider
-const track=document.getElementById('track');
-let pos=0;
-const max=document.querySelectorAll('.review-card').length-3;
-const isMobile=()=>window.innerWidth<769;
-const visible=()=>isMobile()?1:3;
-function slide(n){
-const c=document.querySelectorAll('.review-card').length;
-const v=visible();
-const cards=document.querySelector('.review-card');
-const gap=24;
-const w=cards.offsetWidth;
-pos=Math.max(0,Math.min(pos+n,c-v));
-track.style.transform=`translateX(-${pos*(w+gap)}px)`;
-document.getElementById('prevReview').disabled=pos===0;
-document.getElementById('nextReview').disabled=pos>=c-v;
-}
-document.getElementById('prevReview').addEventListener('click',()=>slide(-1));
-document.getElementById('nextReview').addEventListener('click',()=>slide(1));
-window.addEventListener('resize',()=>{pos=0;track.style.transform='translateX(0)'});
-
-// drag to scroll
-let isDown=false,startX,scrollPos;
-track.addEventListener('mousedown',e=>{isDown=true;startX=e.pageX-track.offsetLeft;scrollPos=pos;track.style.cursor='grabbing'});
-track.addEventListener('mouseleave',()=>{isDown=false;track.style.cursor='grab'});
-track.addEventListener('mouseup',()=>{isDown=false;track.style.cursor='grab'});
-track.addEventListener('mousemove',e=>{if(!isDown)return;const x=e.pageX-track.offsetLeft;const walk=(x-startX)*.5;if(Math.abs(walk)>30){const dir=walk>0?-1:1;slide(dir);isDown=false}});
 </script>
 
 </body>
