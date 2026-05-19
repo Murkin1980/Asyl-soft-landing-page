@@ -1,0 +1,35 @@
+# Other projects
+DeepTutor/
+asyl soft/
+furniture-3d/
+instance/
+invoice-dashboard/
+web-to-app/
+Другое/
+
+# Python
+*.py
+__pycache__/
+*.pyc
+
+# Logs
+*.log
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Editor
+.vscode/
+.idea/
+
+# Downloads / misc
+nul
+notebooklm_login.py
+notebooklm_login2.py
+notebooklm_login3.py
+save_cookies.py
+save_cookies2.py
+opencode-launcher-README.md
+opencode-launcher.bat
+opencode-smart-launcher.ps1

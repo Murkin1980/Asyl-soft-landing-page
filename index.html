@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Диваны на заказ для современного интерьера. Изготовим модель любого размера из премиальных тканей. Сроки от 14 дней, гарантия 2 года.">
+<title>ATELIER — диваны на заказ для вашего интерьера</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+--b:#f7f2ec;
+--b-alt:#efe7dc;
+--s:#fff;
+--t:#1f1a16;
+--t-sec:#7a6f64;
+--t-mut:#a89b8e;
+--accent:#4a5d3e;
+--accent-h:#3d4d33;
+--accent-l:#eef3ea;
+--terracotta:#b8735a;
+--terracotta-h:#a3644e;
+--gold:#c4a882;
+--border:#e2d5c7;
+--shadow:0 4px 20px rgba(31,26,22,.06);
+--shadow-h:0 12px 40px rgba(31,26,22,.12);
+--rad:16px;
+--rad-sm:8px;
+--font-h:'Cormorant Garamond',Georgia,serif;
+--font-b:'Jost',sans-serif;
+--max-w:1200px;
+--pad:120px 24px;
+--pad-m:80px 20px;
+--nav-h:72px;
+--dur:.4s;
+--ease:cubic-bezier(.25,.1,.25,1)
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-b);color:var(--t);background:var(--b);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit;text-decoration:none}
+button{cursor:pointer;border:none;background:none;font-family:inherit}
+ul{list-style:none}
+.container{width:100%;max-width:var(--max-w);margin:0 auto;padding:0 24px}
+.section{padding:var(--pad)}
+.section__title{font-family:var(--font-h);font-size:clamp(32px,5vw,56px);font-weight:600;line-height:1.15;margin-bottom:8px;color:var(--t)}
+.section__sub{font-size:clamp(16px,1.2vw,19px);color:var(--t-sec);max-width:540px;margin-bottom:56px;font-weight:400;line-height:1.5}
+/* header */
+.header{position:fixed;top:0;left:0;right:0;z-index:100;padding:0 24px;height:var(--nav-h);display:flex;align-items:center;justify-content:space-between;transition:background var(--dur) var(--ease),box-shadow var(--dur) var(--ease)}
+.header.scrolled{background:rgba(247,242,236,.92);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);box-shadow:0 1px 0 var(--border)}
+.header__logo{font-family:var(--font-h);font-size:22px;font-weight:600;letter-spacing:.08em;color:var(--t)}
+.header__nav{display:flex;gap:32px}
+.header__nav a{font-size:14px;font-weight:500;letter-spacing:.03em;color:var(--t-sec);transition:color var(--dur);position:relative}
+.header__nav a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:1.5px;background:var(--accent);transition:width var(--dur) var(--ease)}
+.header__nav a:hover{color:var(--t)}
+.header__nav a:hover::after{width:100%}
+.header__burger{display:none;flex-direction:column;gap:5px;padding:4px;cursor:pointer}
+.header__burger span{width:24px;height:1.5px;background:var(--t);transition:all var(--dur)}
+.header__burger.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.header__burger.open span:nth-child(2){opacity:0}
+.header__burger.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+.mobile-nav{position:fixed;top:var(--nav-h);left:0;right:0;bottom:0;background:var(--b);z-index:99;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:24px;opacity:0;pointer-events:none;transition:opacity var(--dur);padding:24px}
+.mobile-nav.open{opacity:1;pointer-events:auto}
+.mobile-nav a{font-family:var(--font-h);font-size:28px;color:var(--t);transition:color var(--dur)}
+.mobile-nav a:hover{color:var(--accent)}
+/* hero */
+.hero{min-height:100vh;display:flex;align-items:center;padding-top:var(--nav-h);position:relative;overflow:hidden}
+.hero__grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;min-height:calc(100vh - var(--nav-h))}
+.hero__content{padding:48px 0}
+.hero__badge{display:inline-block;font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);background:var(--accent-l);padding:8px 16px;border-radius:100px;margin-bottom:24px}
+.hero__title{font-family:var(--font-h);font-size:clamp(36px,5.5vw,64px);font-weight:600;line-height:1.08;margin-bottom:16px;color:var(--t)}
+.hero__sub{font-size:clamp(16px,1.2vw,19px);color:var(--t-sec);line-height:1.55;margin-bottom:36px;max-width:480px}
+.hero__actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:48px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 32px;border-radius:100px;font-size:15px;font-weight:500;letter-spacing:.02em;transition:all var(--dur) var(--ease);position:relative;overflow:hidden}
+.btn-primary{background:var(--accent);color:#fff}
+.btn-primary:hover{background:var(--accent-h);transform:translateY(-1px);box-shadow:0 8px 24px rgba(74,93,62,.3)}
+.btn-secondary{border:1.5px solid var(--border);color:var(--t);background:transparent}
+.btn-secondary:hover{border-color:var(--t);background:rgba(31,26,22,.03);transform:translateY(-1px)}
+.btn-whatsapp{background:#25d366;color:#fff}
+.btn-whatsapp:hover{background:#1da954;transform:translateY(-1px);box-shadow:0 8px 24px rgba(37,211,102,.3)}
+.btn-outline-light{border:1.5px solid rgba(255,255,255,.3);color:#fff;background:transparent}
+.btn-outline-light:hover{border-color:#fff;background:rgba(255,255,255,.08)}
+.hero__badges{display:flex;gap:32px;flex-wrap:wrap}
+.hero__badge-item{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--t-sec);font-weight:500}
+.hero__badge-item svg{flex-shrink:0;color:var(--accent)}
+.hero__image{position:relative;height:100%;min-height:500px;border-radius:var(--rad);overflow:hidden}
+.hero__image img{width:100%;height:100%;object-fit:cover;position:absolute;top:0;left:0}
+.hero__image::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,transparent 40%,rgba(31,26,22,.15))}
+/* section headers */
+.section__header{text-align:center;margin-bottom:56px}
+.section__header .section__sub{margin-left:auto;margin-right:auto}
+.section__label{display:inline-block;font-size:11px;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--accent);background:var(--accent-l);padding:6px 14px;border-radius:100px;margin-bottom:16px}
+/* catalog */
+.catalog__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.catalog-card{background:var(--s);border-radius:var(--rad);overflow:hidden;box-shadow:var(--shadow);transition:all var(--dur) var(--ease);cursor:pointer;display:flex;flex-direction:column}
+.catalog-card:hover{box-shadow:var(--shadow-h);transform:translateY(-4px)}
+.catalog-card__image{position:relative;overflow:hidden;aspect-ratio:4/3}
+.catalog-card__image img{width:100%;height:100%;object-fit:cover;transition:transform .6s var(--ease)}
+.catalog-card:hover .catalog-card__image img{transform:scale(1.05)}
+.catalog-card__body{padding:20px 24px 24px;flex:1;display:flex;flex-direction:column}
+.catalog-card__title{font-family:var(--font-h);font-size:20px;font-weight:600;margin-bottom:6px;color:var(--t)}
+.catalog-card__desc{font-size:14px;color:var(--t-sec);line-height:1.5;margin-bottom:12px;flex:1}
+.catalog-card__meta{display:flex;justify-content:space-between;align-items:center;padding-top:12px;border-top:1px solid var(--border)}
+.catalog-card__size{font-size:13px;color:var(--t-mut)}
+.catalog-card__price{font-family:var(--font-h);font-size:20px;font-weight:600;color:var(--accent)}
+.catalog-card__btn{margin-top:16px;width:100%;text-align:center;padding:12px;border-radius:100px;border:1.5px solid var(--border);font-size:14px;font-weight:500;color:var(--t);transition:all var(--dur);background:transparent}
+.catalog-card__btn:hover{background:var(--t);color:#fff;border-color:var(--t)}
+/* advantages */
+.advantages{background:var(--b-alt)}
+.advantages__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
+.advantage-card{padding:40px 32px;background:var(--s);border-radius:var(--rad);box-shadow:var(--shadow);transition:all var(--dur) var(--ease);position:relative}
+.advantage-card:hover{box-shadow:var(--shadow-h);transform:translateY(-2px)}
+.advantage-card__icon{width:48px;height:48px;margin-bottom:20px;color:var(--accent)}
+.advantage-card__title{font-family:var(--font-h);font-size:20px;font-weight:600;margin-bottom:8px}
+.advantage-card__text{font-size:14px;color:var(--t-sec);line-height:1.6}
+/* materials */
+.materials__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.material-card{border-radius:var(--rad);overflow:hidden;background:var(--s);box-shadow:var(--shadow);transition:all var(--dur) var(--ease)}
+.material-card:hover{box-shadow:var(--shadow-h);transform:translateY(-2px)}
+.material-card__image{aspect-ratio:1;overflow:hidden}
+.material-card__image img{width:100%;height:100%;object-fit:cover;transition:transform .6s var(--ease)}
+.material-card:hover .material-card__image img{transform:scale(1.06)}
+.material-card__body{padding:16px 20px 20px}
+.material-card__title{font-family:var(--font-h);font-size:18px;font-weight:600;margin-bottom:4px}
+.material-card__desc{font-size:13px;color:var(--t-sec);line-height:1.5}
+/* howto */
+.howto{background:var(--b-alt)}
+.howto__grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;counter-reset:step}
+.howto__step{text-align:center;padding:40px 20px;background:var(--s);border-radius:var(--rad);box-shadow:var(--shadow);position:relative;transition:all var(--dur) var(--ease)}
+.howto__step:hover{box-shadow:var(--shadow-h);transform:translateY(-2px)}
+.howto__step::before{counter-increment:step;content:counter(step);position:absolute;top:-16px;left:50%;transform:translateX(-50%);width:36px;height:36px;border-radius:50%;background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:center;font-family:var(--font-h);font-size:16px;font-weight:600}
+.howto__step-icon{margin-top:8px;margin-bottom:16px;width:40px;height:40px;color:var(--accent);margin-left:auto;margin-right:auto}
+.howto__step-title{font-family:var(--font-h);font-size:20px;font-weight:600;margin-bottom:6px}
+.howto__step-text{font-size:14px;color:var(--t-sec);line-height:1.5}
+/* reviews */
+.reviews__slider{overflow:hidden;position:relative}
+.reviews__track{display:flex;gap:24px;transition:transform .5s var(--ease);cursor:grab}
+.reviews__track:active{cursor:grabbing}
+.review-card{min-width:calc(33.333% - 16px);flex-shrink:0;background:var(--s);border-radius:var(--rad);padding:32px;box-shadow:var(--shadow);transition:all var(--dur) var(--ease)}
+.review-card:hover{box-shadow:var(--shadow-h)}
+.review-card__stars{display:flex;gap:4px;margin-bottom:16px;color:var(--gold);font-size:16px}
+.review-card__text{font-size:15px;color:var(--t-sec);line-height:1.6;margin-bottom:20px;font-style:italic}
+.review-card__author{display:flex;align-items:center;gap:12px}
+.review-card__avatar{width:44px;height:44px;border-radius:50%;object-fit:cover;background:var(--b-alt)}
+.review-card__name{font-size:14px;font-weight:500;color:var(--t)}
+.review-card__role{font-size:12px;color:var(--t-mut)}
+.reviews__controls{display:flex;justify-content:center;gap:12px;margin-top:32px}
+.reviews__arrow{width:44px;height:44px;border-radius:50%;border:1.5px solid var(--border);display:flex;align-items:center;justify-content:center;transition:all var(--dur);color:var(--t-sec)}
+.reviews__arrow:hover{border-color:var(--t);color:var(--t);background:var(--s)}
+/* FAQ */
+.faq__list{max-width:720px;margin:0 auto}
+.faq-item{border-bottom:1px solid var(--border);padding:20px 0}
+.faq-item__question{display:flex;justify-content:space-between;align-items:center;width:100%;text-align:left;font-size:17px;font-weight:500;color:var(--t);padding:4px 0;transition:color var(--dur)}
+.faq-item__question:hover{color:var(--accent)}
+.faq-item__icon{width:20px;height:20px;flex-shrink:0;transition:transform var(--dur);color:var(--t-sec)}
+.faq-item.open .faq-item__icon{transform:rotate(45deg)}
+.faq-item__answer{overflow:hidden;max-height:0;transition:max-height .5s var(--ease),padding .3s var(--ease)}
+.faq-item.open .faq-item__answer{max-height:300px;padding-top:12px}
+.faq-item__answer-inner{font-size:15px;color:var(--t-sec);line-height:1.6}
+/* cta */
+.cta{background:linear-gradient(135deg,var(--t) 0%,#2a231e 100%);color:#fff;text-align:center;position:relative;overflow:hidden}
+.cta::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 30% 50%,rgba(74,93,62,.2),transparent 70%),radial-gradient(ellipse at 70% 50%,rgba(184,115,90,.1),transparent 60%);pointer-events:none}
+.cta .section__title{color:#fff}
+.cta .section__sub{color:rgba(255,255,255,.6);margin-left:auto;margin-right:auto}
+.cta__actions{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-bottom:32px}
+.cta__phone{display:inline-flex;align-items:center;gap:8px;font-size:22px;font-weight:500;color:rgba(255,255,255,.8);transition:color var(--dur);font-family:var(--font-h)}
+.cta__phone:hover{color:#fff}
+.cta__form{max-width:420px;margin:0 auto;display:flex;flex-direction:column;gap:12px}
+.cta__form input{padding:14px 20px;border-radius:100px;border:1.5px solid rgba(255,255,255,.15);background:rgba(255,255,255,.06);color:#fff;font-size:15px;font-family:var(--font-b);outline:none;transition:border-color var(--dur),background var(--dur)}
+.cta__form input::placeholder{color:rgba(255,255,255,.4)}
+.cta__form input:focus{border-color:rgba(255,255,255,.4);background:rgba(255,255,255,.1)}
+.cta__form .btn-primary{background:var(--terracotta)}
+.cta__form .btn-primary:hover{background:var(--terracotta-h)}
+.cta__note{font-size:13px;color:rgba(255,255,255,.35);margin-top:12px}
+/* footer */
+.footer{padding:64px 24px 32px;background:var(--t);color:rgba(255,255,255,.7)}
+.footer__grid{max-width:var(--max-w);margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px}
+.footer__brand{font-family:var(--font-h);font-size:20px;font-weight:600;color:#fff;margin-bottom:8px}
+.footer__about{font-size:14px;line-height:1.6;color:rgba(255,255,255,.5);max-width:280px}
+.footer__title{font-size:13px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:16px}
+.footer__links{display:flex;flex-direction:column;gap:10px}
+.footer__links a{font-size:14px;color:rgba(255,255,255,.6);transition:color var(--dur)}
+.footer__links a:hover{color:#fff}
+.footer__bottom{border-top:1px solid rgba(255,255,255,.08);margin-top:48px;padding-top:24px;text-align:center;font-size:13px;color:rgba(255,255,255,.3)}
+/* sticky mobile bar */
+.sticky-bar{position:fixed;bottom:0;left:0;right:0;z-index:90;display:none;background:var(--s);border-top:1px solid var(--border);padding:10px 16px;gap:8px;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+.sticky-bar a{flex:1;display:flex;align-items:center;justify-content:center;gap:8px;padding:12px;border-radius:100px;font-size:14px;font-weight:500}
+.sticky-bar .wa{background:#25d366;color:#fff}
+.sticky-bar .tg{background:#0088cc;color:#fff}
+.sticky-bar .tel{border:1.5px solid var(--border);color:var(--t)}
+/* scroll animation */
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.reveal-delay-1{transition-delay:.1s}
+.reveal-delay-2{transition-delay:.2s}
+.reveal-delay-3{transition-delay:.3s}
+.reveal-delay-4{transition-delay:.4s}
+
+/* responsive */
+@media(max-width:1024px){
+.catalog__grid{grid-template-columns:repeat(2,1fr)}
+.advantages__grid{grid-template-columns:repeat(2,1fr)}
+.materials__grid{grid-template-columns:repeat(2,1fr)}
+.howto__grid{grid-template-columns:repeat(2,1fr)}
+.footer__grid{grid-template-columns:repeat(2,1fr);gap:32px}
+.review-card{min-width:calc(50% - 12px)}
+}
+@media(max-width:768px){
+.section{padding:var(--pad-m)}
+.hero__grid{grid-template-columns:1fr;gap:0}
+.hero__image{min-height:360px;order:-1;border-radius:0;margin:-24px -24px 0}
+.hero__content{padding:32px 0 48px}
+.hero__badges{gap:16px}
+.header__nav{display:none}
+.header__burger{display:flex}
+.catalog__grid,.advantages__grid,.materials__grid,.howto__grid{grid-template-columns:1fr}
+.footer__grid{grid-template-columns:1fr;gap:24px;text-align:center}
+.footer__about{margin:0 auto}
+.review-card{min-width:calc(100% - 0px)}
+.sticky-bar{display:flex}
+.cta__phone{font-size:18px}
+}
+</style>
+</head>
+<body>
+
+<!-- mobile nav -->
+<nav class="mobile-nav" id="mobileNav">
+<a href="#catalog" onclick="closeMobile()">Модели</a>
+<a href="#advantages" onclick="closeMobile()">Преимущества</a>
+<a href="#materials" onclick="closeMobile()">Материалы</a>
+<a href="#faq" onclick="closeMobile()">FAQ</a>
+<a href="#contacts" onclick="closeMobile()">Контакты</a>
+</nav>
+
+<!-- header -->
+<header class="header" id="header">
+<a href="#" class="header__logo">ATELIER</a>
+<nav class="header__nav">
+<a href="#catalog">Модели</a>
+<a href="#advantages">Преимущества</a>
+<a href="#materials">Материалы</a>
+<a href="#faq">FAQ</a>
+<a href="#contacts">Контакты</a>
+</nav>
+<button class="header__burger" id="burger" aria-label="Меню" onclick="toggleMobile()">
+<span></span><span></span><span></span>
+</button>
+</header>
+
+<!-- 1. hero -->
+<section class="hero" id="hero">
+<div class="container hero__grid">
+<div class="hero__content reveal">
+<span class="hero__badge">Индивидуальное производство</span>
+<h1 class="hero__title">Диваны ручной работы<br>для вашего интерьера</h1>
+<p class="hero__sub">Изготовим модель любого размера из премиальных тканей. Работаем с частными клиентами и дизайнерами интерьеров.</p>
+<div class="hero__actions">
+<a href="#catalog" class="btn btn-primary">Получить каталог</a>
+<a href="#cta" class="btn btn-secondary">Рассчитать стоимость</a>
+<a href="https://wa.me/79123456789" class="btn btn-whatsapp">WhatsApp</a>
+</div>
+<div class="hero__badges">
+<span class="hero__badge-item">
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+Сроки от 14 дней
+</span>
+<span class="hero__badge-item">
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+Гарантия 2 года
+</span>
+<span class="hero__badge-item">
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/></svg>
+Любые размеры
+</span>
+</div>
+</div>
+<div class="hero__image reveal reveal-delay-2">
+<img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=1000&q=80" alt="Диван в современном интерьере" loading="eager">
+</div>
+</div>
+</section>
+
+<!-- 2. catalog -->
+<section class="section" id="catalog">
+<div class="container">
+<div class="section__header reveal">
+<span class="section__label">Каталог</span>
+<h2 class="section__title">Наши модели</h2>
+<p class="section__sub">Каждый диван изготавливается под ваш интерьер. Выберите понравившуюся модель — адаптируем размеры, ткань и цвет.</p>
+</div>
+<div class="catalog__grid">
+<div class="catalog-card reveal reveal-delay-1">
+<div class="catalog-card__image">
+<img src="https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?auto=format&fit=crop&w=600&h=450&q=80" alt="Модель Астория" loading="lazy">
+</div>
+<div class="catalog-card__body">
+<h3 class="catalog-card__title">Астория</h3>
+<p class="catalog-card__desc">Классический диван с глубокой посадкой и съемными чехлами. Идеален для просторных гостиных.</p>
+<div class="catalog-card__meta">
+<span class="catalog-card__size">220 × 95 × 85 см</span>
+<span class="catalog-card__price">от 89 900 ₽</span>
+</div>
+<a href="#cta" class="catalog-card__btn">Запросить расчет</a>
+</div>
+</div>
+<div class="catalog-card reveal reveal-delay-2">
+<div class="catalog-card__image">
+<img src="https://images.unsplash.com/photo-1549187774-b4e9b0445a41?auto=format&fit=crop&w=600&h=450&q=80" alt="Модель Монро" loading="lazy">
+</div>
+<div class="catalog-card__body">
+<h3 class="catalog-card__title">Монро</h3>
+<p class="catalog-card__desc">Компактный диван для небольших комнат. Лаконичный дизайн с акцентными подушками.</p>
+<div class="catalog-card__meta">
+<span class="catalog-card__size">180 × 90 × 80 см</span>
+<span class="catalog-card__price">от 72 500 ₽</span>
+</div>
+<a href="#cta" class="catalog-card__btn">Запросить расчет</a>
+</div>
+</div>
+<div class="catalog-card reveal reveal-delay-3">
+<div class="catalog-card__image">
+<img src="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?auto=format&fit=crop&w=600&h=450&q=80" alt="Модель Бруклин" loading="lazy">
+</div>
+<div class="catalog-card__body">
+<h3 class="catalog-card__title">Бруклин</h3>
+<p class="catalog-card__desc">Угловой диван с вместительным бельевым ящиком и местом для хранения подушек.</p>
+<div class="catalog-card__meta">
+<span class="catalog-card__size">260 × 160 × 85 см</span>
+<span class="catalog-card__price">от 145 000 ₽</span>
+</div>
+<a href="#cta" class="catalog-card__btn">Запросить расчет</a>
+</div>
+</div>
+<div class="catalog-card reveal reveal-delay-1">
+<div class="catalog-card__image">
+<img src="https://images.unsplash.com/photo-1567016432779-094069958ea5?auto=format&fit=crop&w=600&h=450&q=80" alt="Модель Сохо" loading="lazy">
+</div>
+<div class="catalog-card__body">
+<h3 class="catalog-card__title">Сохо</h3>
+<p class="catalog-card__desc">Диван-кровать с ортопедическим основанием и механизмом трансформации еврокнижка.</p>
+<div class="catalog-card__meta">
+<span class="catalog-card__size">200 × 95 × 90 см</span>
+<span class="catalog-card__price">от 108 000 ₽</span>
+</div>
+<a href="#cta" class="catalog-card__btn">Запросить расчет</a>
+</div>
+</div>
+<div class="catalog-card reveal reveal-delay-2">
+<div class="catalog-card__image">
+<img src="https://images.unsplash.com/photo-1583607694-99e54a22a050?auto=format&fit=crop&w=600&h=450&q=80" alt="Модель Челси" loading="lazy">
+</div>
+<div class="catalog-card__body">
+<h3 class="catalog-card__title">Челси</h3>
+<p class="catalog-card__desc">Полукруглый диван для просторных гостиных. Эффектный элемент интерьера.</p>
+<div class="catalog-card__meta">
+<span class="catalog-card__size">240 × 100 × 80 см</span>
+<span class="catalog-card__price">от 132 000 ₽</span>
+</div>
+<a href="#cta" class="catalog-card__btn">Запросить расчет</a>
+</div>
+</div>
+<div class="catalog-card reveal reveal-delay-3">
+<div class="catalog-card__image">
+<img src="https://images.unsplash.com/photo-1586023497996-0f69b45c7b10?auto=format&fit=crop&w=600&h=450&q=80" alt="Модель Хэмптон" loading="lazy">
+</div>
+<div class="catalog-card__body">
+<h3 class="catalog-card__title">Хэмптон</h3>
+<p class="catalog-card__desc">Модульный диван с возможностью перестановки секций под любую планировку.</p>
+<div class="catalog-card__meta">
+<span class="catalog-card__size">300 × 95 × 85 см</span>
+<span class="catalog-card__price">от 178 000 ₽</span>
+</div>
+<a href="#cta" class="catalog-card__btn">Запросить расчет</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- 3. advantages -->
+<section class="section advantages" id="advantages">
+<div class="container">
+<div class="section__header reveal">
+<span class="section__label">Почему мы</span>
+<h2 class="section__title">Преимущества работы с нами</h2>
+<p class="section__sub">Мы производим мебель, которая служит годами. Каждый этап — от замера до доставки — под контролем.</p>
+</div>
+<div class="advantages__grid">
+<div class="advantage-card reveal reveal-delay-1">
+<div class="advantage-card__icon">
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M24 4L6 14v20l18 10 18-10V14L24 4z"/><path d="M24 24v20"/><path d="M6 14l18 10 18-10"/></svg>
+</div>
+<h3 class="advantage-card__title">Изготовление на заказ</h3>
+<p class="advantage-card__text">Любая конфигурация, размеры и ткань под ваш интерьер. Адаптируем любую модель из каталога.</p>
+</div>
+<div class="advantage-card reveal reveal-delay-2">
+<div class="advantage-card__icon">
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="24" cy="24" r="20"/><path d="M16 24l5 5 11-11"/></svg>
+</div>
+<h3 class="advantage-card__title">Премиальные материалы</h3>
+<p class="advantage-card__text">Только проверенные ткани и наполнители от европейских поставщиков. Даем полную гарантию на материалы.</p>
+</div>
+<div class="advantage-card reveal reveal-delay-3">
+<div class="advantage-card__icon">
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="28" width="40" height="16" rx="3"/><path d="M12 28V16a8 8 0 018-8h8a8 8 0 018 8v12"/><circle cx="16" cy="40" r="4"/><circle cx="32" cy="40" r="4"/></svg>
+</div>
+<h3 class="advantage-card__title">Доставка и сборка</h3>
+<p class="advantage-card__text">Бесплатно по городу. Аккуратно привезем, поднимем на этаж и соберем. Полностью готовый к использованию диван.</p>
+</div>
+<div class="advantage-card reveal reveal-delay-1">
+<div class="advantage-card__icon">
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M24 4v8"/><path d="M24 36v8"/><path d="M4 24h8"/><path d="M36 24h8"/><path d="M10.34 10.34l5.66 5.66"/><path d="M32 32l5.66 5.66"/><path d="M10.34 37.66l5.66-5.66"/><path d="M32 16l5.66-5.66"/></svg>
+</div>
+<h3 class="advantage-card__title">Гарантия 2 года</h3>
+<p class="advantage-card__text">Полное постгарантийное обслуживание. Ремонтируем и восстанавливаем мебель даже после окончания срока гарантии.</p>
+</div>
+<div class="advantage-card reveal reveal-delay-2">
+<div class="advantage-card__icon">
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 32h16"/><path d="M24 16v16"/><rect x="8" y="8" width="32" height="32" rx="4"/></svg>
+</div>
+<h3 class="advantage-card__title">Помощь с выбором</h3>
+<p class="advantage-card__text">Дизайнер подберет модель, размер и ткань под ваш бюджет. Поможем вписать диван в любой интерьер.</p>
+</div>
+<div class="advantage-card reveal reveal-delay-3">
+<div class="advantage-card__icon">
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="8" y="6" width="32" height="36" rx="4"/><path d="M20 6v36"/><path d="M8 18h32"/><path d="M8 30h32"/></svg>
+</div>
+<h3 class="advantage-card__title">Собственное производство</h3>
+<p class="advantage-card__text">Контролируем качество на каждом этапе. Без посредников — работаем напрямую с заказчиком.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- 4. materials -->
+<section class="section" id="materials">
+<div class="container">
+<div class="section__header reveal">
+<span class="section__label">Материалы</span>
+<h2 class="section__title">Ткани и материалы</h2>
+<p class="section__sub">Более 50 вариантов тканей и расцветок. Поможем выбрать под ваш образ жизни и интерьер.</p>
+</div>
+<div class="materials__grid">
+<div class="material-card reveal reveal-delay-1">
+<div class="material-card__image">
+<img src="https://images.unsplash.com/photo-1513407030348-c983a97b98d8?auto=format&fit=crop&w=400&h=400&q=80" alt="Велюр" loading="lazy">
+</div>
+<div class="material-card__body">
+<h3 class="material-card__title">Велюр</h3>
+<p class="material-card__desc">Мягкая бархатистая ткань с благородным блеском. Устойчива к истиранию и приятна на ощупь. Рекомендуем для гостиных.</p>
+</div>
+</div>
+<div class="material-card reveal reveal-delay-2">
+<div class="material-card__image">
+<img src="https://images.unsplash.com/photo-1563974912781-15611e3b5241?auto=format&fit=crop&w=400&h=400&q=80" alt="Рогожка" loading="lazy">
+</div>
+<div class="material-card__body">
+<h3 class="material-card__title">Рогожка</h3>
+<p class="material-card__desc">Прочная натуральная ткань с характерным плетением. Неприхотлива в уходе, подходит для домов с детьми и животными.</p>
+</div>
+</div>
+<div class="material-card reveal reveal-delay-3">
+<div class="material-card__image">
+<img src="https://images.unsplash.com/photo-1599347945091-b0e6f0f5c5b9?auto=format&fit=crop&w=400&h=400&q=80" alt="Экокожа" loading="lazy">
+</div>
+<div class="material-card__body">
+<h3 class="material-card__title">Экокожа</h3>
+<p class="material-card__desc">Практичный материал премиум-класса. Легко чистится, не выцветает, сохраняет вид долгие годы. Отличный выбор для кухни.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- 5. howto -->
+<section class="section howto" id="howto">
+<div class="container">
+<div class="section__header reveal">
+<span class="section__label">Процесс</span>
+<h2 class="section__title">Как мы работаем</h2>
+<p class="section__sub">Прозрачный процесс от заявки до готового дивана в вашей гостиной.</p>
+</div>
+<div class="howto__grid">
+<div class="howto__step reveal reveal-delay-1">
+<div class="howto__step-icon">
+<svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 28l4-4 4 4 8-8 4 4 4-4"/><path d="M4 12h32v20H4z"/></svg>
+</div>
+<h3 class="howto__step-title">Заявка</h3>
+<p class="howto__step-text">Оставляете заявку на сайте или пишете в WhatsApp или Telegram. Мы свяжемся в течение часа.</p>
+</div>
+<div class="howto__step reveal reveal-delay-2">
+<div class="howto__step-icon">
+<svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="20" cy="20" r="16"/><path d="M20 12v8l6 4"/></svg>
+</div>
+<h3 class="howto__step-title">Проект</h3>
+<p class="howto__step-text">Обсуждаем модель, уточняем размеры, подбираем ткань и цвет. Согласовываем стоимость и сроки.</p>
+</div>
+<div class="howto__step reveal reveal-delay-3">
+<div class="howto__step-icon">
+<svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="8" y="6" width="24" height="28" rx="3"/><path d="M12 18h16"/><path d="M16 12h8"/></svg>
+</div>
+<h3 class="howto__step-title">Производство</h3>
+<p class="howto__step-text">Изготавливаем диван под ваш заказ. Присылаем фото процесса и готового изделия перед доставкой.</p>
+</div>
+<div class="howto__step reveal reveal-delay-4">
+<div class="howto__step-icon">
+<svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="22" width="32" height="14" rx="3"/><path d="M10 22V12a6 6 0 016-6h8a6 6 0 016 6v10"/><circle cx="14" cy="34" r="3"/><circle cx="26" cy="34" r="3"/></svg>
+</div>
+<h3 class="howto__step-title">Доставка</h3>
+<p class="howto__step-text">Привозим и собираем в удобное для вас время. Убираем упаковку, показываем, как ухаживать за диваном.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- 6. reviews -->
+<section class="section" id="reviews">
+<div class="container">
+<div class="section__header reveal">
+<span class="section__label">Отзывы</span>
+<h2 class="section__title">Реальные проекты</h2>
+<p class="section__sub">Более 200 семей выбрали наши диваны. Вот несколько проектов, которыми мы гордимся.</p>
+</div>
+<div class="reviews__slider reveal" id="slider">
+<div class="reviews__track" id="track">
+<div class="review-card">
+<div class="review-card__stars">★★★★★</div>
+<p class="review-card__text">«Заказали угловой диван по индивидуальным размерам. Подобрали ткань, которая идеально подошла под стены. Доставили на день раньше срока. Качество отличное — всем рекомендую.»</p>
+<div class="review-card__author">
+<img class="review-card__avatar" src="https://images.unsplash.com/photo-1599566150163-29194dcaad36?auto=format&fit=crop&w=88&h=88&q=80" alt="Елена" loading="lazy">
+<div>
+<div class="review-card__name">Елена</div>
+<div class="review-card__role">диван Астория, гостиная 22 м²</div>
+</div>
+</div>
+</div>
+<div class="review-card">
+<div class="review-card__stars">★★★★★</div>
+<p class="review-card__text">«Искали компактный диван для кухни-гостиной. Посоветовали модель Монро — идеально вписалась. Очень понравилась консультация, помогли с тканью. Спасибо!»</p>
+<div class="review-card__author">
+<img class="review-card__avatar" src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=88&h=88&q=80" alt="Анна" loading="lazy">
+<div>
+<div class="review-card__name">Анна</div>
+<div class="review-card__role">диван Монро, кухня-гостиная 18 м²</div>
+</div>
+</div>
+</div>
+<div class="review-card">
+<div class="review-card__stars">★★★★★</div>
+<p class="review-card__text">«Брали модульный диван Хэмптон. Очень удобно, что можно переставлять секции. Использовали экокожу — дети и кошка не страшны. Выглядит дорого, спасибо за работу.»</p>
+<div class="review-card__author">
+<img class="review-card__avatar" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=88&h=88&q=80" alt="Михаил" loading="lazy">
+<div>
+<div class="review-card__name">Михаил</div>
+<div class="review-card__role">диван Хэмптон, гостиная 28 м²</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="reviews__controls">
+<button class="reviews__arrow" id="prevReview" aria-label="Назад">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+</button>
+<button class="reviews__arrow" id="nextReview" aria-label="Вперед">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+</button>
+</div>
+</div>
+</section>
+
+<!-- 7. FAQ -->
+<section class="section" id="faq">
+<div class="container">
+<div class="section__header reveal">
+<span class="section__label">Вопросы</span>
+<h2 class="section__title">Часто задаваемые вопросы</h2>
+<p class="section__sub">Ответили на самые популярные вопросы. Если не нашли свой — напишите нам, ответим в течение часа.</p>
+</div>
+<div class="faq__list reveal">
+<div class="faq-item">
+<button class="faq-item__question" onclick="toggleFaq(this)">
+<span>Какие сроки изготовления?</span>
+<svg class="faq-item__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+</button>
+<div class="faq-item__answer">
+<div class="faq-item__answer-inner">От 14 рабочих дней, в зависимости от сложности модели и текущей загрузки производства. Точные сроки называем после согласования проекта.</div>
+</div>
+</div>
+<div class="faq-item">
+<button class="faq-item__question" onclick="toggleFaq(this)">
+<span>Можно ли изменить размеры дивана?</span>
+<svg class="faq-item__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+</button>
+<div class="faq-item__answer">
+<div class="faq-item__answer-inner">Да, мы изготавливаем диваны по вашим размерам. Увеличиваем или уменьшаем длину, глубину и высоту. Изменение размеров, как правило, не влияет на стоимость.</div>
+</div>
+</div>
+<div class="faq-item">
+<button class="faq-item__question" onclick="toggleFaq(this)">
+<span>Какие ткани доступны?</span>
+<svg class="faq-item__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+</button>
+<div class="faq-item__answer">
+<div class="faq-item__answer-inner">Более 50 вариантов: велюр, рогожка, экокожа, шенилл, бархат, натуральный лен, микровелюр и другие. Можем прислать каталог с образцами тканей на почту или показать вживую.</div>
+</div>
+</div>
+<div class="faq-item">
+<button class="faq-item__question" onclick="toggleFaq(this)">
+<span>Есть ли доставка в другие города?</span>
+<svg class="faq-item__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+</button>
+<div class="faq-item__answer">
+<div class="faq-item__answer-inner">Бесплатная доставка и сборка по городу при заказе от 80 000 ₽. В регионы отправляем проверенными транспортными компаниями. Упаковываем надежно — ни одного случая повреждения.</div>
+</div>
+</div>
+<div class="faq-item">
+<button class="faq-item__question" onclick="toggleFaq(this)">
+<span>Какая предоплата требуется?</span>
+<svg class="faq-item__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+</button>
+<div class="faq-item__answer">
+<div class="faq-item__answer-inner">Предоплата 30% после подписания договора. Остаток — после готовности и перед доставкой. Принимаем наличные, переводы и карты.</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- 8. final cta -->
+<section class="section cta" id="cta">
+<div class="container">
+<div class="reveal">
+<span class="section__label" style="background:rgba(255,255,255,.08);color:rgba(255,255,255,.7)">Готовы обсудить?</span>
+<h2 class="section__title">Приезжайте в шоурум или оставьте заявку</h2>
+<p class="section__sub">Посмотрите на ткани вживую, протестируйте механизмы и получите консультацию дизайнера.</p>
+<div class="cta__actions">
+<a href="https://wa.me/79123456789" class="btn btn-whatsapp">Написать в WhatsApp</a>
+<a href="https://t.me/username" class="btn btn-outline-light">Написать в Telegram</a>
+<a href="tel:+79123456789" class="cta__phone">+7 (912) 345-67-89</a>
+</div>
+<form class="cta__form" onsubmit="event.preventDefault();alert('Спасибо! Мы свяжемся с вами в ближайшее время.')">
+<input type="text" placeholder="Ваше имя" required aria-label="Имя">
+<input type="tel" placeholder="Номер телефона" required aria-label="Телефон">
+<button type="submit" class="btn btn-primary" style="width:100%">Заказать консультацию</button>
+</form>
+<p class="cta__note">Не беспокоим по пустякам. Только по существу.</p>
+</div>
+</div>
+</section>
+
+<!-- 9. footer -->
+<footer class="footer" id="contacts">
+<div class="footer__grid">
+<div>
+<div class="footer__brand">ATELIER</div>
+<p class="footer__about">Производство диванов на заказ для современного интерьера. Работаем с частными клиентами и дизайнерами интерьеров с 2015 года.</p>
+</div>
+<div>
+<div class="footer__title">Каталог</div>
+<div class="footer__links">
+<a href="#catalog">Астория</a>
+<a href="#catalog">Монро</a>
+<a href="#catalog">Бруклин</a>
+<a href="#catalog">Сохо</a>
+<a href="#catalog">Хэмптон</a>
+</div>
+</div>
+<div>
+<div class="footer__title">Информация</div>
+<div class="footer__links">
+<a href="#advantages">Преимущества</a>
+<a href="#materials">Материалы</a>
+<a href="#howto">Как заказать</a>
+<a href="#faq">Вопросы</a>
+</div>
+</div>
+<div>
+<div class="footer__title">Контакты</div>
+<div class="footer__links">
+<a href="tel:+79123456789">+7 (912) 345-67-89</a>
+<a href="https://wa.me/79123456789">WhatsApp</a>
+<a href="https://t.me/username">Telegram</a>
+<a href="mailto:hello@atelier-sofa.ru">hello@atelier-sofa.ru</a>
+</div>
+</div>
+</div>
+<div class="footer__bottom">© 2026 ATELIER. Все права защищены. Производство диванов на заказ.</div>
+</footer>
+
+<!-- sticky mobile bar -->
+<div class="sticky-bar">
+<a href="https://wa.me/79123456789" class="wa">WhatsApp</a>
+<a href="https://t.me/username" class="tg">Telegram</a>
+<a href="tel:+79123456789" class="tel">Позвонить</a>
+</div>
+
+<script>
+// header scroll
+const header=document.getElementById('header');
+window.addEventListener('scroll',()=>{header.classList.toggle('scrolled',window.scrollY>20)});
+
+// mobile nav
+function toggleMobile(){
+const nav=document.getElementById('mobileNav');
+const burger=document.getElementById('burger');
+nav.classList.toggle('open');burger.classList.toggle('open');
+document.body.style.overflow=nav.classList.contains('open')?'hidden':'';
+}
+function closeMobile(){
+document.getElementById('mobileNav').classList.remove('open');
+document.getElementById('burger').classList.remove('open');
+document.body.style.overflow='';
+}
+
+// scroll reveal
+const observer=new IntersectionObserver((entries)=>{
+entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible')}});
+},{threshold:.08});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+
+// faq
+function toggleFaq(btn){
+const item=btn.closest('.faq-item');
+item.classList.toggle('open');
+document.querySelectorAll('.faq-item.open').forEach(el=>{if(el!==item)el.classList.remove('open')});
+}
+
+// reviews slider
+const track=document.getElementById('track');
+let pos=0;
+const max=document.querySelectorAll('.review-card').length-3;
+const isMobile=()=>window.innerWidth<769;
+const visible=()=>isMobile()?1:3;
+function slide(n){
+const c=document.querySelectorAll('.review-card').length;
+const v=visible();
+const cards=document.querySelector('.review-card');
+const gap=24;
+const w=cards.offsetWidth;
+pos=Math.max(0,Math.min(pos+n,c-v));
+track.style.transform=`translateX(-${pos*(w+gap)}px)`;
+document.getElementById('prevReview').disabled=pos===0;
+document.getElementById('nextReview').disabled=pos>=c-v;
+}
+document.getElementById('prevReview').addEventListener('click',()=>slide(-1));
+document.getElementById('nextReview').addEventListener('click',()=>slide(1));
+window.addEventListener('resize',()=>{pos=0;track.style.transform='translateX(0)'});
+
+// drag to scroll
+let isDown=false,startX,scrollPos;
+track.addEventListener('mousedown',e=>{isDown=true;startX=e.pageX-track.offsetLeft;scrollPos=pos;track.style.cursor='grabbing'});
+track.addEventListener('mouseleave',()=>{isDown=false;track.style.cursor='grab'});
+track.addEventListener('mouseup',()=>{isDown=false;track.style.cursor='grab'});
+track.addEventListener('mousemove',e=>{if(!isDown)return;const x=e.pageX-track.offsetLeft;const walk=(x-startX)*.5;if(Math.abs(walk)>30){const dir=walk>0?-1:1;slide(dir);isDown=false}});
+</script>
+
+</body>
+</html>
